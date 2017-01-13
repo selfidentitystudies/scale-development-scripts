@@ -46,7 +46,7 @@ pander.associationMatrix <- function(x) {
   invisible(lapply(names(scales), function(currentVarName, x=dat[, currentVarName]) {
     pandoc.header(currentVarName, 3);
     pander(descr(x));
-    grid.draw(dataShape(x)$output$plot + ggtitle(currentVarName));
+    grid.draw(dataShape(x)$output$plot);
     grid.newpage();
   }));
 
