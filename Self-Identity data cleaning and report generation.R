@@ -1,12 +1,23 @@
-### Set basePath, depending on which PC we're running
+######################################################################
+### Paths
+######################################################################
 
-if (file.exists('B:/Data/research/Self-Identity/Study 3')) {
-  basePath <- 'B:/Data/research/Self-Identity/Study 3';
-} else if (file.exists('C:/Users/marwi/Documents/Sync/Research/Self-Identity/Study 3')) {
-  basePath <- 'C:/Users/marwi/Documents/Sync/Research/Self-Identity/Study 3';
-} else {
-  basePath <- 'C:/Sync/Research/Self-Identity/Study 3';
-}
+### Add any relevant paths to this vector. The script will select the
+### correct path itself.
+
+basePathVector <- c("B:/Data/research/Self-Identity/Study 3",
+                    "C:/Users/marwi/Documents/Sync/Research/Self-Identity/Study 3",
+                    "C:/Sync/Research/Self-Identity/Study 3");
+
+######################################################################
+### Set the variables with the paths
+######################################################################
+
+### Check which paths exist
+existingDirs <- basePathVector[sapply(basePathVector, dir.exists)];
+
+### Select first existing path as base path
+basePath <- existingDirs[1];
 
 # install.packages('userfriendlyscience');
 # install.packages('rio');
@@ -21,12 +32,12 @@ if (file.exists('B:/Data/research/Self-Identity/Study 3')) {
 ### Set other directories for importing data etc
 workingPath <- basePath;
 outputPath <- file.path(basePath, 'results - intermediate output');
-scriptPath <- file.path(basePath, 'results - analysis scripts');
+scriptPath <- file.path(basePath, 'si3-scripts');
 dataPath <- file.path(basePath, 'data');
 
 ### Whether to update the userfriendlyscience package,
 ### and which versions were used for this script
-userfriendlyscienceVersion <- "0.4-2";
+userfriendlyscienceVersion <- "0.5-3";
 updateUserfriendlyscience = FALSE;
 
 ### Set parameters for running the script
@@ -41,47 +52,47 @@ faMethod <- 'minres';
 
 ### Function for factor analyses
 fullFact <- function(dat = NULL, items=NULL, rotate='oblimin') {
-  
+
   res <- list(input = as.list(environment()),
               intermediate = list(),
               output = list());
-  
+
   if (is.null(dat)) {
     dat <- getData();
   }
-  
+
   if (is.null(items)) {
     items <- names(dat);
   }
-  
+
   res$output$parallel <- fa.parallel(dat[, items]);
   res$output$vss <- vss(dat[, items], rotate=rotate);
-  
+
   class(res) <- 'fullFact';
-  
+
   return(res);
-  
+
 }
 
 print.fullFact <- function(x, ...) {
   print(x$output);
 }
 
-### Function to check for, maybe upload, maybe download, install, and load1 
+### Function to check for, maybe upload, maybe download, install, and load1
 ### a package
 updatePackageInProgress <-
   function(packagename, packageversion, packageWorkingPath,
            packageBuildingPath = "B:/Data/statistics/R/library",
            userfriendlyscienceURL = "http://userfriendlyscience.com",
            silent=FALSE, type=c('bin', 'source')) {
-    
+
     fullRepositories <- c(c('userfriendlyscience'=userfriendlyscienceURL),
                           getOption("repos"));
-    
+
     ### Establish name of the package file
     srcFile <- paste0(packagename, "_", packageversion, ".tar.gz");
     binFile <- paste0(packagename, "_", packageversion, ".zip");
-    
+
     ### Copy potentially newly created and compiled versions of the package
     ### to the directory from where we'll include it
     if (file.exists(file.path(packageBuildingPath, binFile))) {
@@ -114,7 +125,7 @@ updatePackageInProgress <-
         }
       }
     }
-    
+
     if (paste0("package:", packagename) %in% search()) {
       if (!silent) cat("Package '", packagename,
                        "' is loaded; unloading.\n", sep="");
@@ -128,7 +139,7 @@ updatePackageInProgress <-
       if (!silent) cat("Uninstalled package '", packagename,
                        "'.\n", sep="");
     }
-    
+
     ### If we should try to load the bin package, try that first
     if (file.exists(file.path(packageWorkingPath, binFile)) &&
         ('bin' %in% type)) {
@@ -164,14 +175,14 @@ faDfDiamondCIplot <- function(faDf, autoSize=NULL, fixedSize=.25,
                               xlab='Factor Loading',
                               geomAlpha=.3,
                               colors = c('red', 'green')) {
-  
+
   ### Create empty
   res <- ggplot();
-  
+
   CIs <- lapply(seq(1, ncol(faDf), by=3), function(x) {
     return(cbind(faDf[, x:(x+2)], data.frame(row=1:nrow(faDf))));
   });
-  
+
   for (currentFactor in 1:length(CIs)) {
     res <- res + apply(CIs[[currentFactor]], 1, function(x, aSize=autoSize,
                                                          fSize = fixedSize, alpha=geomAlpha,
@@ -184,11 +195,11 @@ faDfDiamondCIplot <- function(faDf, autoSize=NULL, fixedSize=.25,
                           color=color, fill=color));
     });
   }
-  
+
   res <- res + scale_y_reverse(breaks=1:nrow(faDf),
                                labels=rownames(faDf)) +
     ylab(NULL) + xlab(xlab) + theme_bw() + geom_vline(xintercept=0);
-  
+
   return(res);
 }
 
@@ -206,11 +217,11 @@ makeHeaderTable <- function(vector, startCol=2, colSpan=3) {
   headerTable$grobs[[1]] <- textGrob('');
   rm(tmpDf);
   headerTable <- headerTable[1, ];
-  
+
   ### Compute where each column should start and end
   startCols <- seq(startCol, colSpan * nCol + startCol - 1, by=colSpan);
   endCols <- startCols + colSpan - 1;
-  
+
   headerTable$layout[3:nrow(headerTable$layout), c("l", "r")] <-
     list(startCols, endCols);
   return(headerTable);
@@ -244,28 +255,28 @@ scales <- list();
 
 ### Selection
 ### old measures of self-identity selected
-###scales$selfIdentitySelected <- c('Selfidentity_rarelythinkabout', 
+###scales$selfIdentitySelected <- c('Selfidentity_rarelythinkabout',
 ###                                 'Selfidentity_kindofperson',
-###                                 'Selfidentity_seemyselfas', 
-###                                 'Selfidentity_doingbehaviorimportant', 
+###                                 'Selfidentity_seemyselfas',
+###                                 'Selfidentity_doingbehaviorimportant',
 ###                                 'Selfidentity_importantpart');
 
 ### new measures of self-identity selected based on masterthesis
 scales$selfIdentitySelected <- c('Selfidentity_kindofperson',
                                  'Selfidentity_seemyselfas',
-                                 'Selfidentity_concernedwithdoingtherightbehavior', 
+                                 'Selfidentity_concernedwithdoingtherightbehavior',
                                  'Selfidentity_seemyselffollowingthebehaviorguideline');
 
-scales$selfIdentity <- c('Self-identity:\nSomething I\nrarely think about' = 'Selfidentity_rarelythinkabout', 
+scales$selfIdentity <- c('Self-identity:\nSomething I\nrarely think about' = 'Selfidentity_rarelythinkabout',
                          'Self-identity:\n' = 'Selfidentity_kindofperson',
-                         'Self-identity:\n' = 'Selfidentity_seemyselfas', 
-                         'Self-identity:\n' = 'Selfidentity_concernedwithnotdoingthebehaviorenough', 
-                         'Self-identity:\n' = 'Selfidentity_doingbehaviorimportant', 
-                         'Self-identity:\n' = 'Selfidentity_importantpart', 
-                         'Self-identity:\n' = 'Selfidentity_seemyselffollowingthebehaviorguideline', 
-                         'Self-identity:\n' = 'Selfidentity_wouldfeelatalossgivingupwrongbehavior', 
+                         'Self-identity:\n' = 'Selfidentity_seemyselfas',
+                         'Self-identity:\n' = 'Selfidentity_concernedwithnotdoingthebehaviorenough',
+                         'Self-identity:\n' = 'Selfidentity_doingbehaviorimportant',
+                         'Self-identity:\n' = 'Selfidentity_importantpart',
+                         'Self-identity:\n' = 'Selfidentity_seemyselffollowingthebehaviorguideline',
+                         'Self-identity:\n' = 'Selfidentity_wouldfeelatalossgivingupwrongbehavior',
                          'Self-identity:\n' = 'Selfidentity_concernedwithdoingtherightbehavior',
-                         'Self-identity:\n' = 'Selfidentity_wrongbehaviormeansmorethanjusttheact', 
+                         'Self-identity:\n' = 'Selfidentity_wrongbehaviormeansmorethanjusttheact',
                          'Self-identity:\n' = 'Selfidentity_behaviormeansmoretantheactself');
 
 scales$attitude <- c('Attitude_bad_good', 'Attitude_unpleasant_pleasant',
@@ -322,24 +333,26 @@ dataFilenames <- list.files(dataPath);
 
 siDat <- list();
 
+dataFilenames <- dataFilenames[1];
+
 for (currentDataFile in dataFilenames) {
-  
+
   currentBehavior <- sub('([^\\.]+)\\..*', '\\1', currentDataFile);
-  
+
   ### Read the data and store in a dataframe
   siDat[[currentBehavior]] <- list();
   siDat[[currentBehavior]]$raw <-
     read.csv(file.path(dataPath, currentDataFile),
              header = TRUE, sep = ",", row.names=NULL,
              skip=1, stringsAsFactors = FALSE);
-  
+
   ### Remove last variable
   siDat[[currentBehavior]]$raw <-
     siDat[[currentBehavior]]$raw[, names(siDat[[currentBehavior]]$raw) != 'X'];
 
   ### Store with different name as cleaned version
   siDat[[currentBehavior]]$cln <- siDat[[currentBehavior]]$raw;
-  
+
   ### Run file-specific clean-up analyses if any exist
   if (file.exists(file.path(scriptPath, paste0(currentBehavior, " - cleaning.R")))) {
     source(file.path(scriptPath, paste0(currentBehavior, " - cleaning.R")));
@@ -347,61 +360,61 @@ for (currentDataFile in dataFilenames) {
          file.path(scriptPath, paste0(currentBehavior, " - cleaning.R")),
          "'\n");
   }
-  
+
   ### Fix some weird codings from Qualtrics
   siDat[[currentBehavior]]$cln$Intention_intend <-
-    recode(siDat[[currentBehavior]]$cln$Intention_intend, "20=1; 21=2; 22=3; 23=4; 24=5; 25=6; 26=7");
+    car::recode(siDat[[currentBehavior]]$cln$Intention_intend, "20=1; 21=2; 22=3; 23=4; 24=5; 25=6; 26=7");
   siDat[[currentBehavior]]$cln$Intention2willing <-
-    recode(siDat[[currentBehavior]]$cln$Intention2willing, "43=1; 44=2; 45=3; 46=4; 47=5; 27=6; 28=7"); 
+    car::recode(siDat[[currentBehavior]]$cln$Intention2willing, "43=1; 44=2; 45=3; 46=4; 47=5; 27=6; 28=7");
   siDat[[currentBehavior]]$cln$Intention3expect <-
-    recode(siDat[[currentBehavior]]$cln$Intention3expect, "14=1; 15=2; 16=3; 17=4; 18=5; 19=6; 20=7");
-  siDat[[currentBehavior]]$cln$curBeh <- 
-    recode(siDat[[currentBehavior]]$cln$curBeh, "9=1; 10=2; 11=3; 12=4; 14=5; 15=6; 16=7");
+    car::recode(siDat[[currentBehavior]]$cln$Intention3expect, "14=1; 15=2; 16=3; 17=4; 18=5; 19=6; 20=7");
+  siDat[[currentBehavior]]$cln$curBeh <-
+    car::recode(siDat[[currentBehavior]]$cln$curBeh, "9=1; 10=2; 11=3; 12=4; 14=5; 15=6; 16=7");
   siDat[[currentBehavior]]$cln$Injunctivenorm_importantpeople <-
-    recode(siDat[[currentBehavior]]$cln$Injunctivenorm_importantpeople, "40=1; 41=2; 42=3; 43=4; 44=5; 45=6; 46=7; 47=NA");
+    car::recode(siDat[[currentBehavior]]$cln$Injunctivenorm_importantpeople, "40=1; 41=2; 42=3; 43=4; 44=5; 45=6; 46=7; 47=NA");
   siDat[[currentBehavior]]$cln$Descriptivenorm_peoplelikeme <-
-    recode(siDat[[currentBehavior]]$cln$Descriptivenorm_peoplelikeme, "15=1; 16=2; 17=3; 18=4; 19=5; 20=6; 21=7; 22=NA");
+    car::recode(siDat[[currentBehavior]]$cln$Descriptivenorm_peoplelikeme, "15=1; 16=2; 17=3; 18=4; 19=5; 20=6; 21=7; 22=NA");
   siDat[[currentBehavior]]$cln$Perceivedcontrol_forme <-
-    recode(siDat[[currentBehavior]]$cln$Perceivedcontrol_forme, "22=1; 23=2; 24=3; 25=4; 26=5; 27=6; 28=7");
+    car::recode(siDat[[currentBehavior]]$cln$Perceivedcontrol_forme, "22=1; 23=2; 24=3; 25=4; 26=5; 27=6; 28=7");
   siDat[[currentBehavior]]$cln$Perceivedcontrol_reallywantto <-
-    recode(siDat[[currentBehavior]]$cln$Perceivedcontrol_reallywantto, "9=1; 18=2; 10=3; 11=4; 12=5; 13=6; 14=7");
+    car::recode(siDat[[currentBehavior]]$cln$Perceivedcontrol_reallywantto, "9=1; 18=2; 10=3; 11=4; 12=5; 13=6; 14=7");
   siDat[[currentBehavior]]$cln$Past_howoften <-
-    recode(siDat[[currentBehavior]]$cln$Past_howoften, "28=1; 29=2; 30=3; 31=4; 32=5; 33=6; 34=7"); 
+    car::recode(siDat[[currentBehavior]]$cln$Past_howoften, "28=1; 29=2; 30=3; 31=4; 32=5; 33=6; 34=7");
   siDat[[currentBehavior]]$cln$Descriptivenorm_closefriends <-
-    recode(siDat[[currentBehavior]]$cln$Descriptivenorm_closefriends, "8=NA");
+    car::recode(siDat[[currentBehavior]]$cln$Descriptivenorm_closefriends, "8=NA");
   siDat[[currentBehavior]]$cln$Injunctivenorm_mostpeopleapprove <-
-    recode(siDat[[currentBehavior]]$cln$Injunctivenorm_mostpeopleapprove, "8=NA");
-  
+    car::recode(siDat[[currentBehavior]]$cln$Injunctivenorm_mostpeopleapprove, "8=NA");
+
   ########################################################################
   ### Invert items
   ########################################################################
-  
+
   siDat[[currentBehavior]]$cln <-
     invertItems(siDat[[currentBehavior]]$cln, invertedItems);
 
   # siDat[[currentBehavior]]$cln$Injunctivenorm_mostpeopleapprove <-
   #   invertItem(siDat[[currentBehavior]]$cln$Injunctivenorm_mostpeopleapprove, range = c(1, 7));
-  
+
   ########################################################################
   ### Split dataframe into two dataframes; one per country
   ########################################################################
-  
+
   siDat[[paste0(currentBehavior, '-us')]] <- list(cln =
                                                     siDat[[currentBehavior]]$cln[siDat[[currentBehavior]]$cln$country == 1, ]);
   siDat[[paste0(currentBehavior, '-india')]] <- list(cln =
                                                        siDat[[currentBehavior]]$cln[siDat[[currentBehavior]]$cln$country == 2, ]);
-  
+
   ########################################################################
   ### Create and add scales
   ########################################################################
-  
+
   siDat[[currentBehavior]]$cln <-
     makeScales(siDat[[currentBehavior]]$cln, scales);
   siDat[[paste0(currentBehavior, '-us')]]$cln <-
     makeScales(siDat[[paste0(currentBehavior, '-us')]]$cln, scales);
   siDat[[paste0(currentBehavior, '-india')]]$cln <-
     makeScales(siDat[[paste0(currentBehavior, '-india')]]$cln, scales);
-  
+
 }
 
 ########################################################################
@@ -431,20 +444,20 @@ for (currentDataFile in dataFilenames) {
 ########################################################################
 
 for (dataframeName in names(siDat)) {
-  
+
   dat <- siDat[[dataframeName]]$cln;
 
   # ### Start writing output to a file
   # sink(file = file.path(workingPath, paste0("SI output - ", dataframeName)),
   #      split=TRUE);
-  # 
+  #
   # cat0(repeatStr("#", 80), "\n");
   # cat0("### Self-identity output for dataset '", dataframeName, "'\n");
   # cat0(repeatStr("#", 80), "\n\n");
-  
+
   ### Set title of rmarkdown report
   RmdTitle <- paste('Report of', dataframeName);
-  
+
   ### Knit and render rmarkdown report
   render(file.path(scriptPath, 'report.Rmd'),
          output_file = file.path(outputPath, paste0(RmdTitle, '.html')),
@@ -452,5 +465,5 @@ for (dataframeName in names(siDat)) {
 
   ### Stop writing to file
   # sink();
-  
+
 }
