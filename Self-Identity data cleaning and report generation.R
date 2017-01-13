@@ -333,8 +333,6 @@ dataFilenames <- list.files(dataPath);
 
 siDat <- list();
 
-dataFilenames <- dataFilenames[1];
-
 for (currentDataFile in dataFilenames) {
 
   currentBehavior <- sub('([^\\.]+)\\..*', '\\1', currentDataFile);
