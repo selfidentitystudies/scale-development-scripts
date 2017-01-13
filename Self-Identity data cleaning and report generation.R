@@ -32,7 +32,7 @@ basePath <- existingDirs[1];
 ### Set other directories for importing data etc
 workingPath <- basePath;
 outputPath <- file.path(basePath, 'results - intermediate output');
-scriptPath <- file.path(basePath, 'si3-scripts');
+scriptPath <- file.path(basePath, 'scale-development-scripts');
 dataPath <- file.path(basePath, 'data');
 
 ### Whether to update the userfriendlyscience package,
