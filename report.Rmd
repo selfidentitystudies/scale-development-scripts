@@ -122,8 +122,9 @@ Reminder: we moeten naar outliers kijken!
   
   selfIdentityItemScatterMatrix <-
     scatterMatrix(dat[, scales$selfIdentity]);
-  selfIdentityItemScatterMatrix$output$scatterMatrix$xAxisLabels <-
-    names(scales$selfIdentity);
+  # selfIdentityItemScatterMatrix$output$scatterMatrix$xAxisLabels <-
+  #   names(scales$selfIdentity);
+
   
   selfIdentityItemAssociationMatrix <-
     associationMatrix(dat[, scales$selfIdentity]);
