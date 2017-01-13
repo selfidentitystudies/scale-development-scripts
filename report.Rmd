@@ -130,7 +130,7 @@ Reminder: we moeten naar outliers kijken!
   selfIdentityItemAssociationMatrix <-
     associationMatrix(dat[, scales$selfIdentity]);
 
-  print(selfIdentityItemScatterMatrix);
+#  print(selfIdentityItemScatterMatrix);
   print(selfIdentityItemAssociationMatrix);
   
   # selfIdentityItemFullFact <-
