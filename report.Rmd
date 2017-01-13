@@ -43,9 +43,10 @@ pander.associationMatrix <- function(x) {
   
   ### Uitgebreidere descriptives; descr works for vectors, so pass each
   ### column (variable) separately using lapply
-  invisible(lapply(dat[, names(scales)], function(x) {
+  invisible(lapply(names(scales), function(currentVarName, x=dat[, currentVarName]) {
+    pandoc.header(currentVarName, 3);
     pander(descr(x));
-    print(dataShape(x)$plot);
+    grid.draw(dataShape(x)$output$plot);
   }));
 
 ```
