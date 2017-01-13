@@ -1,0 +1,134 @@
+---
+title: "Condom Use - United States"
+author: "M. Snippe, Peters, G.-J.Y., & Kok, G."
+date: "`r format(Sys.time(), '%d %b %Y at %H:%M:%S');`"
+output:
+  html_document:
+    toc: true
+    theme: united
+---
+
+Dit is tekst die je kunt editen. Dus hier leg je uit wat de studie is etc.
+
+Zo wordt iets *italic*, en zo **vet**.
+
+# Dit is heading 1
+
+
+
+```{r echo=FALSE}
+### In this code chunk, we load required packages etc
+if (!(require('psych'))) {
+  stop("This script requires the 'psych' package.");
+}
+if (!(require('grid'))) {
+  stop("This script requires the 'grid' package.");
+}
+if (!(require('pander'))) {
+  stop("This script requires the 'pander' package.");
+}
+
+options(width=160);
+options(xtable.type="html");
+panderOptions('knitr.auto.asis', FALSE);
+panderOptions('table.split.table', Inf);
+
+```
+
+
+```{r}
+### Inspect dataframe
+describe(dat);
+summary(dat);
+
+### Alleen van de schalen:
+summary(dat[, names(scales)])
+
+### Uitgebreidere descriptives; descr works for vectors, so pass each
+### column (variable) separetely using lapply
+lapply(dat[, names(scales)], descr);
+
+```
+
+```{r echo=FALSE}
+
+for (currentVar in names(dat)) {
+  if (length(na.omit(dat[[currentVar]])) < 2) {
+    cat("Skipping ", currentVar, ": too many missing values.\n");
+  } else if (is.numeric(dat[[currentVar]])) {
+    
+    print(powerHist(na.omit(dat[[currentVar]]))$plot + ggtitle(currentVar));
+    
+    print(ggplot(dat, aes_string(y=currentVar, x=1)) +
+      geom_boxplot() + ggtitle(currentVar));
+
+  } else {
+    cat("Skipping ", currentVar, ": not numeric.\n");
+  }
+}
+
+```
+
+# Heading level 1
+## Heading level 2
+### Heading level 3
+
+```{r, echo=FALSE}
+
+scatterMatrix(dat,
+                    items = c("Importancescale_unimportant_important",
+                              "Importancescale_notessential_essential",
+                              "Importancescale_notsignificant_significant"))
+
+```
+
+## Scatter matrices of each scale
+
+```{r echo=FALSE, fig.width=10, fig.height=15, results='asis'}
+
+  for (currentScatterMatricesObjectName in names(scatterMatricesObject)) {
+    pandoc.header(paste0("Scattermatrices for ", currentScatterMatricesObjectName), level=3);
+    for (currentPage in 1:length(scatterMatricesObject[[currentScatterMatricesObjectName]]$output$scatterMatrices)) {
+      cat(paste0("\n\nPage: ", currentPage, "\n"));
+      print(scatterMatricesObject[[currentScatterMatricesObjectName]]$output$scatterMatrices[[currentPage]]);
+    }    
+  }
+
+```
+
+
+```{r results="asis"}
+  ### Pander is a function that formats tables nicely
+  ### associationMatrix generates a correlation matrix, and stores the results in:
+  ### $output, the object with the output
+  ###        $matrix, the dataframes with the output
+  ###               $full, both the point estimates and the confidence intervals
+  pander(associationMatrix(dat[, names(scales)])$output$matrix$full);
+```
+
+## Scale Structures of each scale
+
+```{r results="asis"}
+  for (currentScaleStructureObject in names(scaleStructureObject)) {
+    pandoc.header(paste0(currentScaleStructureObject), level=3);
+    print(scaleStructureObject[[currentScaleStructureObject]]);
+  }
+```
+
+Regressie van attitude, pbc, en perceived norms op condoomgebruik
+
+```{r}
+  regr(intention ~ attitude + pbc + perceivedNorms, dat=dat);
+  print(regrInfluential(intention ~ attitude + pbc + perceivedNorms, data=dat));
+```
+
+Factorladingen
+
+```{r}
+  print(factorLoadingDiamondCIplot(fa(dat[, scales$selfIdentity],
+                              nfactors=2,
+                              fm=faMethod,
+                              n.iter=n.iter),
+                           fixedSize=.15));
+```
+

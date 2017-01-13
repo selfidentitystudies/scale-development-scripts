@@ -1,0 +1,553 @@
+---
+title: "`r print(RmdTitle);`"
+author: "Marwin"
+date: "`r format(Sys.time(), '%d %b %Y at %H:%M:%S');`"
+output:
+  html_document:
+    toc: true
+---
+
+This is a test of the commits.
+
+This is the report of the self-identity analyses for dataset '`r cat(dataframeName);`'.
+
+```{r echo=FALSE}
+
+require('userfriendlyscience')
+safeRequire('ggplot2');
+safeRequire('psych');
+safeRequire('pander');
+safeRequire('qgraph');
+safeRequire('semPlot');
+
+options(width=160);
+options(xtable.type="html");
+panderOptions('knitr.auto.asis', FALSE);
+panderOptions('table.split.table', Inf);
+
+pander.associationMatrix <- function(x) {
+  pander(x$output$matrix$full);
+}
+
+```
+
+## Descriptives
+
+```{r results="asis", fig.width=6, fig.height=4 }
+
+  ### For every variable in the dataset
+
+  nonStringVariables <- !unlist(lapply(dat, is.character));
+
+  pander(describe(dat[, nonStringVariables]));
+  
+  ### Uitgebreidere descriptives; descr works for vectors, so pass each
+  ### column (variable) separately using lapply
+  invisible(lapply(dat[, names(scales)], function(x) {
+    pander(descr(x));
+    print(dataShape(x)$plot);
+  }));
+
+```
+
+### Scatter matrices between intention and scale items
+
+```{r fig.width=8, fig.height=12}
+
+  ### Generate a list containing scattermatrices of the associations
+  ### between intention and each of the items in the other scales
+  scatterMatricesObject <- list();
+  for (currentScale in names(scales)[names(scales) != 'intention']) {
+    cat0("\nCurrently processing '", currentScale, "'\n");
+    scatterMatricesObject[[paste0("Intention With ", currentScale)]] <-
+      paginatedAsymmetricalScatterMatrix(dat,
+                                         rows = scales[[currentScale]],
+                                         cols = scales$intention,
+                                         maxRows = 4,
+                                         showCorrelations=c('top-left',
+                                                            'bottom-right'));
+    print(scatterMatricesObject[[paste0("Intention With ", currentScale)]]$output$scatterMatrices);
+  }
+
+```
+
+### Scale structure
+
+```{r fig.width=16, fig.height=16}
+
+  ### Order scale structure descriptives
+  scaleStructureObject <- list();
+  for (currentScale in names(scales)[names(scales) != 'currentBehavior']) {
+    cat0("\nCurrently processing '", currentScale, "'\n");
+    scaleStructureObject[[paste0("Scale Structure for ", currentScale)]] <-
+      scaleStructure(dat, scales[[currentScale]], poly=FALSE);
+    pander(associationMatrix(dat[, scales[[currentScale]]]));
+    print(scatterMatrix(dat[, scales[[currentScale]]])$output$scatterMatrix);
+    print(scaleStructureObject[[paste0("Scale Structure for ", currentScale)]]);
+  }
+
+```
+
+Reminder: als we straks gemiddelden gaan uitrekenen,
+dan moeten we rekening houden met dat er missing values kunnen
+en mogen zijn.
+  
+Reminder: we moeten naar outliers kijken!
+
+## Association matrix of all scales (variables)
+
+```{r }
+
+  ### Als het nog niet goed is, hierboven 'results='asis'' zetten.
+  ### results='asis';
+
+  ###verdere outline:
+  ###correlation matrix 
+  pander(associationMatrix(dat[, names(scales)]));
+  ### Temporarily commented out; takes a lot of time.
+  #scatterMatrix(dat[, names(scales)])
+
+```
+
+## Correlations between self-identity items
+
+```{r fig.width=8, fig.height=8}
+  
+  ###filtered: 
+  ###nu alleen de benodigde variabelen zonder age etc
+
+  ###factor-analyses (twee variabelen)
+  
+  ### Inspect correlations between all SI items
+  
+  selfIdentityItemScatterMatrix <-
+    scatterMatrix(dat[, scales$selfIdentity]);
+  selfIdentityItemScatterMatrix$output$scatterMatrix$xAxisLabels <-
+    names(scales$selfIdentity);
+  
+  selfIdentityItemAssociationMatrix <-
+    associationMatrix(dat[, scales$selfIdentity]);
+
+  print(selfIdentityItemScatterMatrix);
+  print(selfIdentityItemAssociationMatrix);
+  
+  # selfIdentityItemFullFact <-
+  #   fullFact(dat[, scales$selfIdentity]);
+```
+
+## Factor analyses
+
+```{r}
+  
+
+  ### Factor analysis with 1 factor
+  fa(dat[, scales$selfIdentity], nfactors=1, fm=faMethod, n.iter=1);
+  
+  ### Factor analysis with 2 factors
+  fa(dat[, scales$selfIdentity], nfactors=2, fm=faMethod, n.iter=1);
+  
+  ### Parallel analyses
+  fa.parallel(dat[, scales$selfIdentity]);
+  
+  ### Very Simple Structure
+  vss(dat[, scales$selfIdentity], rotate='oblimin', fm='minres', n=3);
+  
+  ### Factor analysis with 3 factor; to verify that it is the third
+  ### factor that results in the Heywood case
+  fa(dat[, scales$selfIdentity], nfactors=3, fm=faMethod, n.iter=1);
+  
+  ### So, all evidence points to two factors for this sample.
+  ### Now, bootstrap to get factor loadings (and their confidence intervals)
+  fa(dat[, scales$selfIdentity], nfactors=2, fm=faMethod, n.iter=n.iter);
+  
+  ################################################################################
+  ### Probably safe to delete
+  ################################################################################
+  # b <- extractFAloadingsAndCI(a);
+  # b <- lapply(b, function(x) { x[, ncol(x) + 1] <- 1:nrow(x); return(x)});
+  # 
+  # diamondCIplot(b[[1]], yValues=1:nrow(b[[1]]), yLabels=rownames(b[[1]]),
+  #               autoSize=NULL, fixedSize=.25);
+  # 
+  ################################################################################
+  ################################################################################
+  
+  ### For the Self-identity variables in dataframe dat, 
+  print(factorLoadingDiamondCIplot(fa(dat[, scales$selfIdentity],
+                                      nfactors=2,
+                                      fm=faMethod,
+                                      n.iter=n.iter),
+                                   fixedSize=.15));
+  
+  ########################################################################
+  ### Exploratory factor analyses
+  ########################################################################
+  
+  ### Reasoning conceptual indepence - include in article 
+  ### EFAs provide factor loadings. Ideally, these are sufficiently distinct
+  ### to show both underlying factors/variables.
+  
+  ### CFAs provide fit estimates given constraints. If we run a CFA where
+  ### we force each item in the corresponding factor (i.e. with a two-factor
+  ### structure), we can compare the fit to a one-factor model to determine
+  ### conceptual independence.
+  
+  ### If two concepts (or rather, operationalisations) are independent, then
+  ### we would expect the following pattern:
+  ###  - items load differentially on the two factors in the EFA (non-overlapping CI's)
+  ###  - the two-factor model fits better than the one-factor model
+
+
+```
+
+## Conceptual independence matrix
+
+```{r message=FALSE, warning=FALSE}
+
+  ### (remove 'message=FALSE, warning=FALSE' above to see warnings, e.g. about Heywood cases)
+
+  headerTable <- makeHeaderTable(c('Factor 1', 'Factor 2'));
+  
+  ### Reminder: maybe change order of variables
+  
+  ### Reminder: compare variances of items (homogeneity)
+  
+  ### Create object for output
+  grobsList <- list();
+  dfList <- list();
+  
+  ### Initialize progress bar
+  pb <- txtProgressBar(style=3, min = 1, max = length(nonSIvars) ^ 2);
+  for (rowVar in names(nonSIvars)) {
+    ### Get index of this row
+    rowIndex <- which(names(nonSIvars) == rowVar);
+    ### Generate object to store the columns of this row in
+    grobsList[[rowIndex]] <-list();
+    for (colVar in names(nonSIvars)) {
+      
+      ### Get index of this column
+      colIndex <- which(names(nonSIvars) == colVar);
+      ### Generate object to store results for this cell in
+      grobsList[[rowIndex]][[colIndex]] <-list();
+      
+      ### Update progress bar
+      setTxtProgressBar(pb, (rowIndex - 1 * colIndex) + colIndex);
+      
+      if (rowVar == colVar) {
+        ### On the main diagonal
+        grobsList[[rowIndex]][[colIndex]] <-
+          textGrob("");
+        #        textGrob(paste0("Diagonal of \n", rowVar));
+        
+        
+      } else {
+        ### On the upper or lower diagonal
+        
+        ### Continue with next variable if current two variables
+        ### are attitude or importance and attitudeImportance
+        if (any(c('attitude', 'importance') %IN% c(colVar, rowVar)) &&
+            'attitudeImportance' %IN% c(colVar, rowVar)) {
+          
+          grobsList[[rowIndex]][[colIndex]] <-
+            textGrob(paste0("Skipping this cell!\n(", rowVar,
+                            " & ", colVar, ")"));
+          
+          next;
+        }
+        
+        ### Get a convenient list of variables (items)
+        vars <- c(nonSIvars[[rowVar]],
+                  nonSIvars[[colVar]]);
+        
+        ### Get both measurement models
+        oneFactor <- paste0(' variable =~ ',
+                            paste0(vars, collapse=" + "));
+        twoFactor <- paste0(measurementModelSpecs[[rowVar]], "\n",
+                            measurementModelSpecs[[colVar]]);
+        
+        nrOfEFAwarnings <- 0;
+        
+        ### First do an EFA
+#        tryCatch({
+          efa <- fa(dat[, vars], nfactors=2, fm=faMethod, n.iter=n.iter);
+#      }
+                        # warning = function(w) {
+                        #   nrOfEFAwarnings <- nrOfEFAwarnings + 1;
+                        # },
+                        # error = function(e) {
+                        #   cat("Fatal error encountered:\n");
+                        #   print(e);
+                        # });
+        
+        if (nrOfEFAwarnings) {
+          cat0("Encountered ", nrOfEFAwarnings, " warnings.\n");
+        }
+
+        nrOfOneFactorCFAwarnings <- 0;
+
+        ### First do an EFA
+        #tryCatch({
+        oneFactorCFA <- cfa(oneFactor, data=dat);
+        #}
+        #                 warning = function(w) {
+        #                   nrOfOneFactorCFAwarnings <- nrOfOneFactorCFAwarnings + 1;
+        #                 },
+        #                 error = function(e) {
+        #                   cat("Fatal error encountered:\n");
+        #                   print(e);
+        #                 });
+        # 
+        # if (nrOfEFAwarnings) {
+        #   cat0("Encountered ", nrOfOneFactorCFAwarnings, " warnings.\n");
+        # }        
+
+        nrOfTwoFactorCFAwarnings <- 0;
+
+        ### First do an EFA
+        #tryCatch({
+          twoFactorCFA <- cfa(twoFactor, data=dat);
+        #}
+        #                 warning = function(w) {
+        #                   nrOfTwoFactorCFAwarnings <- nrOfTwoFactorCFAwarnings + 1;
+        #                 },
+        #                 error = function(e) {
+        #                   cat("Fatal error encountered:\n");
+        #                   print(e);
+        #                 });
+        # 
+        # if (nrOfEFAwarnings) {
+        #   cat0("Encountered ", nrOfTwoFactorCFAwarnings, " warnings.\n");
+        # }        
+
+        ### Then run and compare the two CFAs
+        cfa <- anova(oneFactorCFA, twoFactorCFA);
+        
+        ### In cfa$Chisq, the first number is the chi square of the
+        ### TWO-factor model, and the second one of the ONE-factor model!
+        bestFittingModel <- ifelse(cfa$Chisq[1] < cfa$Chisq[2],
+                                   '2-factor', '1-factor');
+        
+        fitText <- paste0(bestFittingModel, ' fits better; ',
+                          'Chisq[',
+                          cfa[2, 'Df diff'],
+                          ']=', round(cfa[2, 'Chisq diff'], 2),
+                          ", ",
+                          formatPvalue(cfa[2, 'Pr(>Chisq)']));
+        
+        ### Make dataframe with factor loading confidence intervals
+        faDf <- matrix(unlist(faConfInt(efa)), ncol=6);
+        
+        ### Set row and column names
+        rownames(faDf) <- c(paste0(abbr[rowVar], 1:length(nonSIvars[[rowVar]])),
+                            paste0(abbr[colVar], 1:length(nonSIvars[[colVar]])));
+        colnames(faDf) <- c(rep(c('lo', 'est', 'hi'), 2));
+        
+        ### To do: add explained variance per factor
+        
+        if (rowIndex < colIndex) {
+          ### Upper diagonal
+          
+          grobsList[[rowIndex]][[colIndex]] <-
+            faDfDiamondCIplot(faDf, xlab=NULL) +
+            ggtitle(paste0(rowVar, ' & ', colVar, "\n",
+                           fitText));
+          #           textGrob(paste0("Upper diag:\n", rowVar,
+          #                           " and ", colVar));
+          
+        } else {
+          ### Lower diagonal
+          
+          grobsList[[rowIndex]][[colIndex]] <-
+            tableGrob(round(faDf, 2));
+          
+          grobsList[[rowIndex]][[colIndex]] <-
+            combine(headerTable,
+                    grobsList[[rowIndex]][[colIndex]],
+                    along=2);
+          
+          prevWidths <- grobsList[[rowIndex]][[colIndex]]$widths;
+          
+          ### Add variable names
+          grobsList[[rowIndex]][[colIndex]] <-
+            combine(makeHeaderTable(paste0(rowVar, ' & ', colVar), colSpan=6),
+                    grobsList[[rowIndex]][[colIndex]],
+                    along=2);
+          
+          ### Set widths (again, based on
+          ### https://github.com/baptiste/gridextra/wiki/tableGrob
+          grobsList[[rowIndex]][[colIndex]]$widths <-
+            unit(rep(.95 * (1/ncol(grobsList[[rowIndex]][[colIndex]])),
+                     ncol(grobsList[[rowIndex]][[colIndex]])),
+                 "npc");
+          
+        }
+      }
+      ### Finally, construct content; for diagonal, omega etc; for
+      ### upper diagonal, diamondPlots; for lower diagnoal, numbers
+      
+    }
+  }
+  
+  ### Close progress indicator;
+  close(pb);
+  
+  CIM <- arrangeGrob(grobs=unlist(grobsList, recursive=FALSE),
+                     ncol=length(grobsList));
+  
+  ### Save conceptual independence matrix
+  ggsave(file=file.path(outputPath, paste0('CIM for ',
+                                            dataframeName,
+                                            '.png')),
+         plot=CIM,
+         width=100, height=100, units='cm');
+
+```
+
+### Influential cases and regression analyses
+
+```{r}
+
+  
+  ################################################################################
+  ### Look at influential cases
+  ################################################################################
+  
+  ### regressions
+  regr(intention ~ attitude + pbc + perceivedNorms, dat=dat)
+  regr(intention ~ attitude + perceivedNorms + pbc + pastBehavior, dat=dat)
+  regr(intention ~ attitude + perceivedNorms + pbc + importance + pastBehavior, dat=dat)
+  regr(intention ~ attitudeImportance + perceivedNorms + pbc + pastBehavior, dat=dat)
+  regr(intention ~ attitude + perceivedNorms + pbc + pastBehavior + currentBehavior, dat=dat)
+  regr(intention ~ attitudeImportance + perceivedNorms + pbc + pastBehavior + currentBehavior, dat=dat)
+  regr(intention ~ attitude + perceivedNorms + pbc + selfIdentity + pastBehavior, dat=dat)
+  regr(intention ~ attitudeImportance + perceivedNorms + pbc + selfIdentity + pastBehavior, dat=dat)
+  regr(intention ~ attitudeImportance + perceivedNorms + pbc + selfIdentity + pastBehavior + currentBehavior, dat=dat)
+  
+  ###studying influencial cases
+  
+  regrInfluential(intention ~ attitude + pbc + perceivedNorms, data=dat);
+  
+  regrInfluential(intention ~ attitude + pbc + perceivedNorms + pastBehavior, data=dat);
+  
+  regrInfluential(intention ~ attitudeImportance + perceivedNorms + pbc + pastBehavior, data=dat);
+  
+  regrInfluential(intention ~ attitude + perceivedNorms + pbc + pastBehavior + currentBehavior, data=dat);
+  
+  regrInfluential(intention ~ attitudeImportance + perceivedNorms + pbc + pastBehavior + currentBehavior, data=dat);
+  
+  regrInfluential(intention ~ attitude + perceivedNorms + pbc + selfIdentity + pastBehavior, data=dat);
+  
+  regrInfluential(intention ~ attitudeImportance + perceivedNorms + pbc + selfIdentity + pastBehavior, data=dat);
+  
+  regrInfluential(intention ~ attitudeImportance + perceivedNorms + pbc + selfIdentity + pastBehavior + currentBehavior, data=dat);
+  
+
+```
+
+### Structural equation models
+
+```{r fig.width=8, fig.height=8}
+
+  ################################################################################
+  ################################################################################
+  ### Structural models in SEM
+  ################################################################################
+  ################################################################################
+  
+  structuralModels <- list();
+  structuralModels$basicRAA <- paste0("### Measurement model \n  ",
+                                      measurementModelSpecs$intention, "\n  ",
+                                      measurementModelSpecs$attitude, "\n  ",
+                                      measurementModelSpecs$perceivedNorms, "\n  ",
+                                      measurementModelSpecs$pbc, "\n  ",
+                                      measurementModelSpecs$pastBehavior, "\n",
+                                      "### Residual correlations \n  ",
+                                      "attitude ~~ perceivedNorms", "\n  ",
+                                      "attitude ~~ pbc", "\n  ",
+                                      "perceivedNorms ~~ pbc", "\n",
+                                      "### Structural model \n  ",
+                                      "attitude ~ pastBehavior", "\n  ",
+                                      "perceivedNorms ~ pastBehavior", "\n  ",
+                                      "pbc ~ pastBehavior", "\n  ",
+                                      "intention ~ attitude + perceivedNorms + pbc + pastBehavior");
+
+  ### Past (How often) has a negative variance.
+  ### We need to understand how this can happen.
+  
+  ###sem
+  ## RAA model without past behavior works, therefore the negative variance should be past behavior
+
+  ################################################################################
+ 
+  structuralModels$basicRAA_nobehav <- paste0("### Measurement model \n  ",
+                                      measurementModelSpecs$intention, "\n  ",
+                                      measurementModelSpecs$attitude, "\n  ",
+                                      measurementModelSpecs$perceivedNorms, "\n  ",
+                                      measurementModelSpecs$pbc, "\n  ",
+                                      "### Residual correlations \n  ",
+                                      "attitude ~~ perceivedNorms", "\n  ",
+                                      "attitude ~~ pbc", "\n  ",
+                                      "perceivedNorms ~~ pbc", "\n",
+                                      "### Structural model \n  ",
+                                      "intention ~ attitude + perceivedNorms + pbc");
+
+  ################################################################################
+
+  structuralModels$basicRAA_si <- paste0("### Measurement model \n  ",
+                                         measurementModelSpecs$intention, "\n  ",
+                                         measurementModelSpecs$attitude, "\n  ",
+                                         measurementModelSpecs$perceivedNorms, "\n  ",
+                                         measurementModelSpecs$pbc, "\n  ",
+                                         measurementModelSpecs$selfIdentitySelected, "\n  ",
+                                      "### Residual correlations \n  ",
+                                      "attitude ~~ perceivedNorms", "\n  ",
+                                      "attitude ~~ pbc", "\n  ",
+                                      "attitude ~~ selfIdentitySelected", "\n  ",
+                                      "perceivedNorms ~~ pbc", "\n",
+                                      "perceivedNorms ~~ selfIdentitySelected", "\n",
+                                      "pbc ~~ selfIdentitySelected", "\n",
+                                      "### Structural model \n  ",
+                                      "intention ~ attitude + ",
+                                      "   perceivedNorms + pbc + selfIdentitySelected");
+
+  ################################################################################
+
+  l_ply(names(structuralModels), function(currentModelName) {
+    
+    currentModel <- structuralModels[[currentModelName]];
+    
+    cat(currentModel);
+    
+    lavaanFit <- sem(currentModel,
+                     data=dat);
+
+    ### Multigroup SEM
+    # lavaanFit <- sem(currentModel,
+    #                  data=dat, group='country');
+    
+    print(summary(lavaanFit));
+  
+    parameterEstimates(lavaanFit, ci=TRUE, level=.95,
+                       boot.ci.type='bca.simple');
+    
+    ### Plotting only works for one group
+    qgraph(semPaths(lavaanFit, "std",
+                    edge.label.cex=.8,
+                    exoVar = FALSE,
+                    curvePivot=TRUE,
+                    DoNotPlot=TRUE),
+           title = paste0(currentModelName, ", ", dataframeName),
+           DoNotPlot=FALSE);
+    
+  });
+
+  ###Met GJ doen
+  ###code controleren die is toegevoegd
+  ###correlatiematrix
+  ###regressies
+  ###toesplitsing op cultuur voor de gehele analyse
+  
+  ##factor analyses to determine independency of the determinants
+  
+
+```
