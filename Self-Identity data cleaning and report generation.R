@@ -263,7 +263,7 @@ scales <- list();
 
 ### new measures of self-identity selected based on masterthesis
 scales$selfIdentitySelected <- c('Selfidentity_kindofperson',
-                                 'Selfidentity_seemyselfas',
+                                 'Selfidentity_doingbehaviorimportant',
                                  'Selfidentity_concernedwithdoingtherightbehavior',
                                  'Selfidentity_seemyselffollowingthebehaviorguideline');
 
