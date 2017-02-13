@@ -45,7 +45,7 @@ updateUserfriendlyscience = FALSE;
 
 ### Number of iterations to use when bootstrapping the confidence
 ### intervals for the factor analysis
-n.iter <- 100;
+n.iter <- 10;
 
 ### Method to use for the factor analyses, e.g. minres, ml, wls, etc (see ?fa)
 faMethod <- 'minres';
@@ -465,3 +465,21 @@ for (dataframeName in names(siDat)) {
   # sink();
 
 }
+
+########################################################################
+### Exploring od patterns in factor analysis
+########################################################################
+
+dat <- siDat[['alcohol-india']]$cln;
+
+scatterMatrix(dat,
+              items=as.character(unlist(scales[c('pbc', 'selfIdentitySelected')])));
+
+faObject <- fa(dat[, as.character(unlist(scales[c('pbc', 'selfIdentitySelected')]))],
+               nfactors=2,
+               fm=faMethod,
+               n.iter=n.iter);
+
+print(factorLoadingDiamondCIplot(faObject, fixedSize=.35, alpha=.25));
+
+
