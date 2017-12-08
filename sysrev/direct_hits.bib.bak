@@ -80,17 +80,4 @@
   review              = {incl},
 }
 
-@Article{patiro2016theory,
-  author              = {Patiro, Shine Pintor S and Budiyanti, Hety},
-  title               = {The Theory of Planned Behavior, Past Behavior, Situational Factors, and Self-Identity Factors Drive Indonesian Enterpreneurs to Be Indebtedness},
-  journal             = {DeReMa (Development Research of Management): Jurnal Manajemen},
-  year                = {2016},
-  volume              = {11},
-  number              = {1},
-  pages               = {46--66},
-  marwinsveld         = {Measures used in this study is based on measures used in previous research by Godin et al. (1996) dan White et al. (2008).},
-  operationalisations = {“I think of my self as a young enterpreneur” || “I think of my self as a optimist person” || “I think of my self as a liable person || “I think of my self as a honest person”},
-  review              = {incl},
-}
-
 @Comment{jabref-meta: databaseType:bibtex;}

@@ -1,0 +1,143 @@
+---
+title: "Self Identity Literature Synthesis"
+author: "Marwin Snippe & Gjalt-Jorn Ygram Peters"
+date: "`r format(Sys.time(), '%d %b %Y at %H:%M:%S');`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE);
+
+######################################################################
+### Paths
+######################################################################
+
+### Add any relevant paths to this vector. The script will select the
+### correct path itself.
+
+basePathVector <- c("B:/Data/research/Self-Identity/Study 3",
+                    "C:/Users/marwi/Documents/Sync/Research/Self-Identity/Study 3",
+                    "C:/Sync/Research/Self-Identity/Study 3");
+
+######################################################################
+### Set the variables with the paths
+######################################################################
+
+### Check which paths exist
+existingDirs <- basePathVector[sapply(basePathVector, dir.exists)];
+
+### Select first existing path as base path
+basePath <- existingDirs[1];
+repoPath <- file.path(basePath, 'scale-development-scripts');
+workingPath <- file.path(basePath, 'scale-development-scripts');
+
+### Bibliomethics data file
+bibliometricsDatafile <-
+  file.path(repoPath,
+            "overview-ascendency-descendency.xlsx");
+
+################################################################################
+### Load packages
+################################################################################
+
+require('userfriendlyscience');
+require('metabefor');
+safeRequire('readxl');
+safeRequire('igraph');
+safeRequire('ggplot2');
+
+```
+
+```{r load-bibliography}
+
+######################################################################
+### Load datafile
+######################################################################
+
+dat <- read_excel(bibliometricsDatafile);
+
+######################################################################
+### Function to create unique identifier
+######################################################################
+
+uniqueIdentifier <- function(author, year, title,
+                             bibtexAuthors = FALSE,
+                             glue = "-") {
+  if (bibtexAuthors) {
+    ### Remove first names from author names
+    author <- gsub(",[a-zA-Z \\.]+and", "-", author);
+    ### Replace first names and initials of last author
+    author <- gsub(",.*", "", author);
+    
+    ### Remove spaces
+    author <- gsub(" ", "", author);
+  } else {
+    ### Remove initials from author names
+    author <- gsub("[A-Z]\\.", "", author);
+    ### Remove all non-letters and replace them by a dash
+    author <- gsub("[^a-zA-Z]+", "-", author);
+  }
+  ### Substitute upper case letters with lower case letters
+  author <- tolower(author);
+  ### Remove dash at the end, where present
+  author <- gsub("\\-$", "", author);
+  ### Add year
+  year <- paste0("--", year, "--");
+  ### Remove initials from titles
+  title <- gsub("[A-Z]\\.", "", title);
+  ### Remove all non-letters and replace them by a dash
+  title <- gsub("[^a-zA-Z]+", "-", title);
+  ### Substitute upper case letters with lower case letters
+  title <- tolower(title);
+  ### Remove dash at the end, where present
+  title <- gsub("\\-$", "", title);
+  ### Combine all elements
+  return(paste0(author,
+                year,
+                title));
+};
+
+######################################################################
+### Generate unique identifiers for the children
+######################################################################
+
+dat$child_id2 <- uniqueIdentifier(author = dat$Ref_authors,
+                                 year = dat$Ref_year,
+                                 title = dat$Ref_title);
+
+######################################################################
+### Generate unique identifiers for the parents
+######################################################################
+
+dat$parent_id2 <- uniqueIdentifier(author = dat$Auteur,
+                                  year = dat$Jaar,
+                                  title = dat$Titel,
+                                  bibtexAuthors=TRUE);
+
+######################################################################
+### 'Minify' identifiers
+######################################################################
+
+suppressWarnings({
+  dat$child_id_min <- abbreviate(gsub("\\-", "", dat$child_id),
+                                 minlength=10);
+  dat$parent_id_min <- abbreviate(gsub("\\-", "", dat$parent_id),
+                                 minlength=10);
+});
+
+######################################################################
+### Graph
+######################################################################
+
+citationNetwork <- graph.data.frame(dat[, c('parent_id_min', 'child_id_min')]);
+
+pdf(file = file.path(workingPath, "citation-network.pdf"),
+    width=27, height=19);
+plot(citationNetwork, size=1, width=2,
+     label.cex=26, asp=.6);
+dev.off()
+
+```
+
+
+

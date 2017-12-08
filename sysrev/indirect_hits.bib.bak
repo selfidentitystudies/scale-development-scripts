@@ -420,17 +420,4 @@
   review              = {incl},
 }
 
-@Article{theodorakis1995attitudes,
-  author              = {Theodorakis, Yannis and Bagiatis, Konstantinos and Goudas, Marios},
-  title               = {Attitudes toward teaching individuals with disabilities: Application of planned behavior theory},
-  journal             = {Adapted Physical Activity Quarterly},
-  year                = {1995},
-  volume              = {12},
-  number              = {2},
-  pages               = {151--160},
-  marwinsveld         = {These were based on items used in a relevant study (Theodorakis, 1994).},
-  operationalisations = {"To teach individuals with disabilities during the next years is an important part of myself," || "I am the type of person oriented to teach individuals with disabilities during the next years," || "It is in my character to teach individuals with disabilities during the next years," || "I am a person who must teach individuals with disabilities during the next years."},
-  review              = {incl},
-}
-
 @Comment{jabref-meta: databaseType:biblatex;}
