@@ -74,9 +74,22 @@
   volume              = {87},
   number              = {4},
   pages               = {224--234},
-  marwinsveld         = {Two items assessed the extent to which performing the oral health behaviors is an important part of an individual’s self–identity ||},
+  marwinsveld         = {Two items assessed the extent to which performing the oral health behaviors is an important part of an individual’s self–identity |},
   operationalisations = {“The oral cavity and dental health are an important part of who I am” || “I think of myself as someone who cares about his dental health,”},
   publisher           = {American Dental Hygienists Association},
+  review              = {incl},
+}
+
+@Article{patiro2016theory,
+  author              = {Patiro, Shine Pintor S and Budiyanti, Hety},
+  title               = {The Theory of Planned Behavior, Past Behavior, Situational Factors, and Self-Identity Factors Drive Indonesian Enterpreneurs to Be Indebtedness},
+  journal             = {DeReMa (Development Research of Management): Jurnal Manajemen},
+  year                = {2016},
+  volume              = {11},
+  number              = {1},
+  pages               = {46--66},
+  marwinsveld         = {Measures used in this study is based on measures used in previous research by Godin et al. (1996) dan White et al. (2008).},
+  operationalisations = {“I think of my self as a young enterpreneur” || “I think of my self as a optimist person” || “I think of my self as a liable person || “I think of my self as a honest person”},
   review              = {incl},
 }
 

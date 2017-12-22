@@ -45,7 +45,7 @@
   volume              = {24},
   number              = {4},
   pages               = {1180--1198},
-  operationalisations = {‘‘I would feel at a loss if I were forced to give up my volunteering’’ || ‘‘For me, being a volunteer means more than just volunteer work’’ ||},
+  operationalisations = {‘‘I would feel at a loss if I were forced to give up my volunteering’’ || ‘‘For me, being a volunteer means more than just volunteer work’’},
   publisher           = {Springer},
   review              = {incl},
 }
@@ -55,7 +55,7 @@
   title               = {Aspect of identity, intention to perform three health behaviors, and implications for communication interventions.},
   year                = {2011},
   marwinsveld         = {Cheek’s (1989) Aspects of Identity Questionnaire (AIQ)},
-  operationalisations = {My personal values and moral standards;|| My dreams and imagination,|| My emotions and feelings; || My thoughts and ideas; || The ways I deal with my fears and anxieties; || Knowing that I continue to be essentially the same inside even though life involves many external changes; || my selfknowledge, || My ideas about what kind of person I really am; || My personal self-evaluation, the private opinion I have of myself || ( 1= not important to my sense of who I am, 5=extremely important to my sense of who I am) ||},
+  operationalisations = {My personal values and moral standards;|| My dreams and imagination,|| My emotions and feelings; || My thoughts and ideas; || The ways I deal with my fears and anxieties; || Knowing that I continue to be essentially the same inside even though life involves many external changes; || my selfknowledge, || My ideas about what kind of person I really am; || My personal self-evaluation, the private opinion I have of myself || ( 1= not important to my sense of who I am, 5=extremely important to my sense of who I am)},
   review              = {incl},
 }
 
@@ -275,7 +275,7 @@
   number              = {2},
   pages               = {321--331},
   marwinsveld         = {Operationalized from Armitage & Conner},
-  operationalisations = {“Blooddonation is important to me” (not at all to a great deal) || “The issue of blood donation is...”(not relevant to me torelevant to me) || “Blood donation is something I rarelythink about”},
+  operationalisations = {“Blood donation is important to me” (not at all to a great deal) || “The issue of blood donation is...”(not relevant to me torelevant to me) || “Blood donation is something I rarely think about”},
   publisher           = {Wiley Online Library},
   review              = {incl},
 }
@@ -339,7 +339,7 @@
   marwinsveld         = {Operationaled from Callero19and Terry and colleagues.28},
   operationalisations = {Blood donation isimportant to me,” || “I am like the kind of person whodonates blood,” || “Blood donation is an important partof who I am”},
   publisher           = {Wiley Online Library},
-  review              = {icl},
+  review              = {incl},
 }
 
 @Article{dennis2009nature,
@@ -417,6 +417,33 @@
   title               = {PREDICTING THE INTENTION TO PURCHASE GREEN FOOD IN CROATIA--THE INFLUENCE OF PERCIEVED SELF-IDENTITY},
   marwinsveld         = {Adapted from Tan, T.H. (2013)},
   operationalisations = {Purchasing green products makes an important part of my personality. || I think of myself as a person of great interest in green products || Green products are a part of my lifestyle.},
+  review              = {incl},
+}
+
+@Article{theodorakis1995attitudes,
+  author              = {Theodorakis, Yannis and Bagiatis, Konstantinos and Goudas, Marios},
+  title               = {Attitudes toward teaching individuals with disabilities: Application of planned behavior theory},
+  journal             = {Adapted Physical Activity Quarterly},
+  year                = {1995},
+  volume              = {12},
+  number              = {2},
+  pages               = {151--160},
+  marwinsveld         = {These were based on items used in a relevant study (Theodorakis, 1994).},
+  operationalisations = {"To teach individuals with disabilities during the next years is an important part of myself," || "I am the type of person oriented to teach individuals with disabilities during the next years," || "It is in my character to teach individuals with disabilities during the next years," || "I am a person who must teach individuals with disabilities during the next years."},
+  review              = {incl},
+}
+
+@Article{santina2017psychosocial,
+  author              = {Santina, Tania and Godin, Gaston and Gagn{\'e}, Camille and Guillaumie, Laurence},
+  title               = {Psychosocial determinants of physical activity at school among Lebanese children: an application of the planned behavior theory},
+  journal             = {Journal of Physical Education and Sport},
+  year                = {2017},
+  volume              = {17},
+  number              = {1},
+  pages               = {171},
+  marwinsveld         = {3 items, only 1 mentioned},
+  operationalisations = {Do you feel like you have the profile of someone who does a lot physical activity?},
+  publisher           = {Universitatea din Pitesti},
   review              = {incl},
 }
 
