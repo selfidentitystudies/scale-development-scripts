@@ -25,7 +25,7 @@ workingPath <- file.path(basePath, 'scale-development-scripts');
 queryHitsPath <- file.path(repoPath, "sysrev");
 
 ### Filenames
-queryHitsFiles <- c("Query1and2.bib", "direct_hits.bib", "indirect_hits.bib");
+queryHitsFiles <- c("Query1and2_NEW.bib", "direct_hits_NEW.bib", "indirect_hits_NEW.bib");
 #queryHitsFiles <- c("temporary.bib");
 
 ################################################################################
@@ -34,7 +34,6 @@ queryHitsFiles <- c("Query1and2.bib", "direct_hits.bib", "indirect_hits.bib");
 
 require('userfriendlyscience');
 require('metabefor');
-safeRequire('plyr');
 safeRequire('plyr');
 
 ################################################################################
@@ -52,12 +51,13 @@ resultsTable <- ldply(queryHits,
                         res <- data.frame(bibtexkey = queryHitsObject$records$bibtexkey,
                                           author = queryHitsObject$records$author,
                                           title = queryHitsObject$records$title,
-                                          year = queryHitsObject$records$year)
+                                          year = queryHitsObject$records$year,
+                                          review_items = queryHitsObject$records$review_items)
                         res$operationalisations <-
                           sapply(strsplit(queryHitsObject$records$operationalisations, "\\|\\|"),
                                  paste,
                                  collapse="\n");
-                        return(res);
+                        return(res[res$review_items=='incl', ]);
                       });
 
 write.csv(resultsTable,
@@ -76,8 +76,9 @@ longResults <- ldply(queryHits,
                                          author = queryHitsObject$records$author,
                                          title = queryHitsObject$records$title,
                                          year = queryHitsObject$records$year,
-                                         operationalisations = queryHitsObject$records$operationalisations)
-                       return(res);
+                                         operationalisations = queryHitsObject$records$operationalisations,
+                                         review_items = queryHitsObject$records$review_items)
+                       return(res[res$review_items=='incl', ]);
                      });
 
 longResults <- do.call(rbind,
@@ -101,6 +102,11 @@ row.names(longResults) <- NULL;
 ###############################################################################
 ###############################################################################
 
+### Note that because we investigate self-identity as potential
+### 'fourth RAA variable', consistent with RAA's TACT principle, only
+### operationalisations that contain the target behavior are included;
+### others were marked 'nosi' (no self-identity) during extraction.
+
 aspectStimulusFragments <- list(importantPart = "important part",
                                 importantToMe = "important to me",
                                 believeIn = "believe in",
@@ -117,7 +123,7 @@ aspectStimulusFragments <- list(importantPart = "important part",
                                 feelAtALoss = c("feel (that I missed out|lost|upset|a loss|at a loss)",
                                                 "los(t|e) something"),
                                 amSomeoneWho = c("I am someone who", "I am somebody who"),
-                                acceptibility = "accept",
+                                acceptability = "accept",
                                 perceivedProjectedImage = c("might see me as", "people to see me as"),
                                 iAmA = c("I am a", "I am meat eater", "thinker", "person who teaches"),
                                 iAm = "I am",
@@ -169,13 +175,78 @@ multiVarFreq(longResults, names(aspectStimulusFragments));
 sum(longResults$anyMatch);
 nrow(longResults) - sum(longResults$anyMatch);
 
-#longResults[longResults$iAmA, 'operationalisation'];
+### Verify that all operationalisations were only categorised once
+apply(longResults[, names(aspectStimulusFragments)], 1, sum)
 
-### Write to .csv file
-write.csv(longResults[!longResults$anyMatch, c('operationalisation',
-                                               'bibtexkey',
-                                               'author',
-                                               'title',
-                                               'year')],
+### Store categorisation in one column
+longResults$category <-
+  unlist(lapply(apply(longResults[, names(aspectStimulusFragments)], 1, which),
+                function(x) return(ifelse(is.logical(x), 'uncategorized',
+                                          names(x)))));
+
+### Sort by category
+longResults <- longResults[order(longResults$category), ];
+
+### Write to .csv file (only export rows where 'longResults$anyMatch'
+### is true to only export unmatched entries; remove the '|1' below)
+write.csv(longResults[longResults$anyMatch|1, c('category',
+                                                'operationalisation',
+                                                'bibtexkey',
+                                                'author',
+                                                'title',
+                                                'year')],
           file = file.path(workingPath, "operationalisations.csv"));
 
+###############################################################################
+###############################################################################
+### Discussion of operationalisation categories
+###############################################################################
+###############################################################################
+
+
+
+aspectStimulusFragments_refined <-
+   list(importantPart = "important part",
+        importantToMe = "important to me",
+        believeIn = "believe in",
+        meansMoreThan = "means more than",
+        responsibility = "I have a responsibility",
+        howIWantToLive = "want(ed)* to live",
+        rarelyEvenThinkAbout = "rarely (even )*think about",
+        kindOfPerson = c("kind of person", "type of (a )*person",
+                         "fits who they are", "typical (person|for me)", "out of character",
+                         "alien", "in my character", "I(.{1,2}m) a good example of",
+                         "profile of someone", "generally recognises"),
+        considerMyself = "(class|consider|considered|see|saw) (my|your|them)sel(f|ves)",
+        concernedAbout = "concerned (are you )*(about|with)",
+        feelAtALoss = c("feel (that I missed out|lost|upset|a loss|at a loss)",
+                        "los(t|e) something"),
+        amSomeoneWho = c("I am someone who", "I am somebody who"),
+        acceptability = "accept",
+        perceivedProjectedImage = c("might see me as", "people to see me as"),
+        iAmA = c("I am a", "I am meat eater", "thinker", "person who teaches"),
+        iAm = "I am",
+        roleIdentity = "role identity",
+        appropriateForMe = "appropriate for me",
+        should = c("should"),
+        miscellaneous = c("self-confident", "will study hard",
+                          "enjoyed", "to what extent .* affect you",
+                          "quite frankly", "normal part of everyday life",
+                          "part of my life",
+                          "most important issue(s)*",
+                          "I involve in", "feelings",
+                          "goals related to",
+                          "relevant to me", "each of us"),
+        domainSpecific = c("read the list of"),
+        selfAs = "self (as|to be)",
+        role = c("role", "person primarily responsible"),
+        embarrassed = "embarrassed",
+        express = "express",
+        lifestyle = "lifestyle",
+        image = "image",
+        values = "values",
+        beingUnique = "being unique",
+        important = "important",
+        personal = "personal",
+        characteristics = "characteristics",
+        self = "self");

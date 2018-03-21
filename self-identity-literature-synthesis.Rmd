@@ -9,34 +9,6 @@ output: html_document
 
 knitr::opts_chunk$set(echo = FALSE);
 
-######################################################################
-### Paths
-######################################################################
-
-### Add any relevant paths to this vector. The script will select the
-### correct path itself.
-
-basePathVector <- c("B:/Data/research/Self-Identity/Study 3",
-                    "C:/Users/marwi/Documents/Sync/Research/Self-Identity/Study 3",
-                    "C:/Sync/Research/Self-Identity/Study 3");
-
-######################################################################
-### Set the variables with the paths
-######################################################################
-
-### Check which paths exist
-existingDirs <- basePathVector[sapply(basePathVector, dir.exists)];
-
-### Select first existing path as base path
-basePath <- existingDirs[1];
-repoPath <- file.path(basePath, 'scale-development-scripts');
-workingPath <- file.path(basePath, 'scale-development-scripts');
-
-### Bibliomethics data file
-bibliometricsDatafile <-
-  file.path(repoPath,
-            "overview-ascendency-descendency.xlsx");
-
 ################################################################################
 ### Load packages
 ################################################################################
@@ -46,6 +18,22 @@ require('metabefor');
 safeRequire('readxl');
 safeRequire('igraph');
 safeRequire('ggplot2');
+safeRequire('here');
+safeRequire('tidyverse');
+safeRequire('ggrepel');
+
+######################################################################
+### Set the variables with the paths (from before here::here()
+######################################################################
+
+### Select first existing path as base path
+repoPath <- here::here();
+workingPath <- here::here();
+
+### Bibliomethics data file
+bibliometricsDatafile <-
+  file.path(repoPath,
+            "overview-ascendency-descendency.xlsx");
 
 ```
 
@@ -99,20 +87,20 @@ uniqueIdentifier <- function(author, year, title,
 };
 
 ######################################################################
-### Generate unique identifiers for the children
+### Generate unique identifiers for the children (citing articles)
 ######################################################################
 
-dat$child_id2 <- uniqueIdentifier(author = dat$Ref_authors,
-                                 year = dat$Ref_year,
-                                 title = dat$Ref_title);
+dat$child_id <- uniqueIdentifier(author = dat$citingArticle_author,
+                                 year = dat$citingArticle_year,
+                                 title = dat$citingArticle_title);
 
 ######################################################################
-### Generate unique identifiers for the parents
+### Generate unique identifiers for the parents (cited articles)
 ######################################################################
 
-dat$parent_id2 <- uniqueIdentifier(author = dat$Auteur,
-                                  year = dat$Jaar,
-                                  title = dat$Titel,
+dat$parent_id <- uniqueIdentifier(author = dat$citedArticle_author,
+                                  year = dat$citedArticle_year,
+                                  title = dat$citedArticle_title,
                                   bibtexAuthors=TRUE);
 
 ######################################################################
@@ -123,19 +111,74 @@ suppressWarnings({
   dat$child_id_min <- abbreviate(gsub("\\-", "", dat$child_id),
                                  minlength=10);
   dat$parent_id_min <- abbreviate(gsub("\\-", "", dat$parent_id),
-                                 minlength=10);
+                                  minlength=10);
 });
+
+### Sort elements by year
+dat$citingArticle_year_clean <-
+  convertToNumeric(dat$citingArticle_year);
+
+### Add sort order based on year and author of citing articles
+dat$citingArticle_numericID <-
+  order(dat$citingArticle_year_clean, dat$citingArticle_author);
+
+dat <- as.data.frame(dat);
+
+dat[dat$citingArticle_numericID, c('citingArticle_numericID',
+                                   'citingArticle_year_clean',
+                                   'citingArticle_author')];
+#                                   'citingArticle_title')];
+
+######################################################################
+### Create scatterplot to show domains where each operationalisation
+### type was applied
+######################################################################
+
+basedOnOriginalPapers <- 
+  dat[dat$parent_id_min %in% c('sprkss1992', 'chrng1988r'), ];
+
+basedOnOriginalPapers$origin <-
+  ifelse(basedOnOriginalPapers$parent_id_min == 'sprkss1992',
+         "Sparks1992",
+         "Charng1998");
+
+crossTab(basedOnOriginalPapers$citingArticle_topic,
+         basedOnOriginalPapers$origin);
+
+domainCitations <- table(basedOnOriginalPapers$citingArticle_topic,
+                         basedOnOriginalPapers$origin) %>%
+  data.frame() %>%
+  spread('Var2', 'Freq');
+
+names(domainCitations)[1] <- "Domain";
+
+ggplot(domainCitations, aes_string(x = 'Sparks1992',
+                                   y = 'Charng1998',
+                                   label = 'Domain')) +
+  geom_point(position = position_jitter()) +
+  geom_text_repel();
 
 ######################################################################
 ### Graph
 ######################################################################
 
-citationNetwork <- graph.data.frame(dat[, c('parent_id_min', 'child_id_min')]);
+citNetDat <- dat[dat$child_id_min != 'NANANA', c('parent_id_min', 'child_id_min')];
+#citNetDat$children <- 
+
+citationNetwork <- graph.data.frame(citNetDat);
+
+### Set attributes
+vertex_attr(citationNetwork, "color") <- "grey";
+vertex_attr(citationNetwork, "label.color") <- "black";
+vertex_attr(citationNetwork, "label.family") <- "sans";
+vertex_attr(citationNetwork, "size") <- 1;
+vertex_attr(citationNetwork, "label.dist") <- .6;
+vertex_attr(citationNetwork, "label.cex") <- 1.1; # font size
 
 pdf(file = file.path(workingPath, "citation-network.pdf"),
     width=27, height=19);
-plot(citationNetwork, size=1, width=2,
-     label.cex=26, asp=.6);
+plot(citationNetwork, size=60, width=40,
+     asp=2/3);
 dev.off()
 
 ```
