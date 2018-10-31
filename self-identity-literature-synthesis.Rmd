@@ -14,13 +14,20 @@ knitr::opts_chunk$set(echo = FALSE);
 ################################################################################
 
 require('userfriendlyscience');
-require('metabefor');
 safeRequire('readxl');
 safeRequire('igraph');
 safeRequire('ggplot2');
 safeRequire('here');
 safeRequire('tidyverse');
 safeRequire('ggrepel');
+safeRequire('plyr');
+safeRequire('knitr');            ### For kable
+safeRequire('ufs');              ### 
+safeRequire('data.tree');        ### To work with data structured in a tree in metabefor
+safeRequire('devtools');         ### To install metabefor from github repo
+                                 ### ... Which we then do here:
+devtools::install_github("Matherion/metabefor");
+require('metabefor');
 
 ######################################################################
 ### Set the variables with the paths (from before here::here()
@@ -29,15 +36,58 @@ safeRequire('ggrepel');
 ### Select first existing path as base path
 repoPath <- here::here();
 workingPath <- here::here();
+recordsPath <- here::here('sysrev');
 
 ### Bibliomethics data file
 bibliometricsDatafile <-
   file.path(repoPath,
             "overview-ascendency-descendency.xlsx");
 
+### Query hits file
+queryHitsFile <- "2018-08-29--ebsco--psychinfo.ris";
+
+```
+
+```{r prepare-clean-screening}
+
+queryHits <-
+  metabefor::importRISlike(file.path(recordsPath, queryHitsFile),
+                           encoding="native.enc");
+
+queryHits$output$records$yearOnly <-
+  gsub("^(\\d{4}).*", "\\1", queryHits$output$records$year);
+queryHits$output$records$monthOnly <-
+  gsub("^\\d{4}/(\\d{2})/.+$", "\\1", queryHits$output$records$year);
+queryHits$output$records$monthOnly <-
+  ifelse(nchar(queryHits$output$records$monthOnly) == 2,
+         queryHits$output$records$monthOnly,
+         0);
+
+queryHits$output$records$screening1 <-
+  ifelse(queryHits$output$records$yearOnly >= 2018 &
+           queryHits$output$records$monthOnly >= 2,
+         'future',
+         "");
+
+sysrevExport(queryHits,
+             filename=file.path(recordsPath,
+                                "master-screening-automatically-produced.bib"));
+
 ```
 
 ```{r load-bibliography}
+
+######################################################################
+### 
+######################################################################
+
+screeningResults <-
+  metabefor::importBibtex(file.path(recordsPath,
+                          "master-screening-edited.bib"));
+
+userfriendlyscience::freq(screeningResults$records$source);
+userfriendlyscience::freq(screeningResults$records$review_abstract);
+userfriendlyscience::freq(screeningResults$records$review_items);
 
 ######################################################################
 ### Load datafile

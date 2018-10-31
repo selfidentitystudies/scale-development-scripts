@@ -6,7 +6,8 @@ output: html_document
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = TRUE);
+require(here);
 ```
 
 ```{r}
@@ -15,31 +16,16 @@ knitr::opts_chunk$set(echo = TRUE)
 ### Paths
 ######################################################################
 
-### Add any relevant paths to this vector. The script will select the
-### correct path itself.
-
-basePathVector <- c("B:/Data/research/Self-Identity/Study 3",
-                    "C:/Users/marwi/Documents/Sync/Research/Self-Identity/Study 3",
-                    "C:/Sync/Research/Self-Identity/Study 3");
-
-######################################################################
-### Set the variables with the paths
-######################################################################
-
-### Check which paths exist
-existingDirs <- basePathVector[sapply(basePathVector, dir.exists)];
-
-### Select first existing path as base path
-basePath <- existingDirs[1];
-repoPath <- file.path(basePath, 'scale-development-scripts');
-workingPath <- file.path(basePath, 'scale-development-scripts');
+repoPath <- here::here();
+workingPath <- here::here();
 
 ### Query hits path
 queryHitsPath <- file.path(repoPath, "sysrev");
 
 ### Filenames
-queryHitsFiles <- c("Query1and2_NEW.bib", "direct_hits_NEW.bib", "indirect_hits_NEW.bib");
+#queryHitsFiles <- c("Query1and2_NEW.bib", "direct_hits_NEW.bib", "indirect_hits_NEW.bib");
 #queryHitsFiles <- c("temporary.bib");
+queryHitsFiles <- c("master-screening-edited finished backup.bib");
 
 ################################################################################
 ### Load packages
@@ -48,6 +34,7 @@ queryHitsFiles <- c("Query1and2_NEW.bib", "direct_hits_NEW.bib", "indirect_hits_
 require('userfriendlyscience');
 require('metabefor');
 safeRequire('plyr');
+safeRequire('dplyr');
 
 ################################################################################
 ### Import references
@@ -58,6 +45,36 @@ queryHits <- lapply(queryHitsFiles,
                       return(importBibtex(file.path(queryHitsPath, filename)));
                     });
 names(queryHits) <- queryHitsFiles;
+
+```
+
+Hits from each source:
+
+```{r}
+knitr::kable(userfriendlyscience::freq(queryHits[[1]]$records$source)$dat);
+```
+
+Types of entries:
+
+```{r}
+knitr::kable(userfriendlyscience::freq(tolower(queryHits[[1]]$records$recordtype))$dat);
+```
+
+Screening results - exclusions based on abstract:
+
+```{r}
+knitr::kable(userfriendlyscience::freq(tolower(queryHits[[1]]$records$review_abstract))$dat);
+```
+
+Screening results - exclusions based on full text:
+
+```{r}
+knitr::kable(userfriendlyscience::freq(tolower(queryHits[[1]]$records$review_items))$dat);
+```
+
+
+
+```{r}
 
 resultsTable <- ldply(queryHits,
                       function(queryHitsObject) {
@@ -226,7 +243,7 @@ write.csv(longResults[longResults$anyMatch|1, c('category',
 - **embarrassed**: This category contains one item, and that item is problematic for two reasons. First, it is hard to disentangle from expected disapproval from social referents; and second, it's not about how one sees oneself, but rather about how one does not want to be seen by others. In combination with the single use of this item in the literature, we will exclude this item. *Exclude*
 - **express**: These items strongly concern identity, but also emphasize social interaction. We will retain the category for now. *Retain*
 - **feelAtALoss**: These items are widely used in the literature, and feelings of loss if a behavior can no longer be performed appears to be seen as an integral part of self-identity (and this argument has been made, see p. 290 of the RAA book). We will therefore retain this item. *Retain*
-- **howIWantToLive**: These items measure how people want to behavior: how they want to live. They do not measure how people want to be, or who they want to be: therefore, these items are at best quite distal operationalisations of self-identity. Therefore, we will exclude them. *Exclude*
+- **howIWantToLive**: These items measure how people want to behave: how they want to live. They do not measure how people want to be, or who they want to be: therefore, these items are at best quite distal operationalisations of self-identity. Therefore, we will exclude them. *Exclude*
 - **iAm**: These are the archetypical self-identity items: they directly assess how somebody sees themselves. Note: one of the items measures pride derived from a behavior. We discussed this and concluded that self-identity can have elements where people are not proud of; therefore, pride, or deriving self-esteem, is not a necessary component of self-identity, so even if we would place this item in a dedicated category, we would exclude it. *Retain*
 - **iAmA**: This is the same as the 'iAm' category, except that here, 'named roles' are used, whereas the 'iAm' category enables use of more flexible identities. *Merge*
 - **image**: Image can be defined as "the general impression that a person, organization, or product presents to the public". This means that these items in essence fall in the "selfAs" category, which also contains the 'see myself as' items. *Merge*
@@ -385,3 +402,72 @@ In conclusion, it seems that based on the self-identity literature, the followin
 - **"I am the [kind|type|sort] of person who [TARGET]"**
 - **"For me, [TARGET] means more than just the act itself"**
 - **"[TARGET] is something I rarely even think about"**
+
+## Number of operationalisations in each category in each phase
+
+```{r operationalisations-per-category, results='asis'}
+
+cat0("\n\n### Round 1\n\n");
+
+print(knitr::kable(userfriendlyscience::freq(longResults$category)$dat));
+
+cat0("\n\n### Round 2\n\n");
+
+print(knitr::kable(userfriendlyscience::freq(longResults$category_revision1)$dat));
+
+cat0("\n\n### Round 3\n\n");
+
+print(knitr::kable(userfriendlyscience::freq(longResults$category_revision2)$dat));
+
+```
+
+## A table with all operationalisations
+
+```{r all-operationalisations-and-their-categorisation}
+
+allOperationalisationsCategorised <- longResults[, c('author',
+                                                     'year',
+                                                     'operationalisation',
+                                                     'category',
+                                                     'category_revision1',
+                                                     'category_revision2')];
+
+allOperationalisationsCategorised$author <-
+  as.character(allOperationalisationsCategorised$author);
+
+allOperationalisationsCategorised$reference <-
+  strsplit(allOperationalisationsCategorised$author, split=' and ');
+
+allOperationalisationsCategorised$reference <-
+  lapply(allOperationalisationsCategorised$reference,
+         function(x) {
+           gsub(pattern=",.*", replacement="", x) %>%
+           vecTxt();
+         });
+  
+allOperationalisationsCategorised$reference <-
+  paste0(allOperationalisationsCategorised$reference,
+         " (",
+         allOperationalisationsCategorised$year,
+         ")");
+ 
+allOperationalisationsCategorised <-
+  allOperationalisationsCategorised[, c('reference',
+                                        'operationalisation',
+                                        'category',
+                                        'category_revision1',
+                                        'category_revision2')];
+
+names(allOperationalisationsCategorised) <-
+  c('Article',
+    'Item',
+    'Category 1',
+    'Category 2',
+    'Category 3');
+
+knitr::kable(allOperationalisationsCategorised);
+
+write.csv(allOperationalisationsCategorised,
+          file = file.path(workingPath, "operationalisations-categorized.csv"));
+
+```

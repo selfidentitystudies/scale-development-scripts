@@ -5,13 +5,14 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    version="1.0"
    width="210mm"
    height="297mm"
    id="svg2985"
-   inkscape:version="0.92.3 (2405546, 2018-03-11)"
+   inkscape:version="0.91 r13725"
    sodipodi:docname="figure-2.svg"
    inkscape:export-filename="B:\Data\images &amp; templates\Presentation tools\models\eppm.png"
    inkscape:export-xdpi="81.510002"
@@ -24,7 +25,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -37,19 +38,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1920"
-     inkscape:window-height="974"
+     inkscape:window-width="1368"
+     inkscape:window-height="849"
      id="namedview3151"
-     showgrid="true"
+     showgrid="false"
      fit-margin-top="20"
      fit-margin-left="20"
      fit-margin-right="20"
      fit-margin-bottom="20"
-     inkscape:zoom="0.56690313"
-     inkscape:cx="-251.77009"
-     inkscape:cy="520.61334"
-     inkscape:window-x="-9"
-     inkscape:window-y="-9"
+     inkscape:zoom="1"
+     inkscape:cx="1190.3316"
+     inkscape:cy="512.55199"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer3"
      inkscape:snap-bbox="true"
@@ -66,13 +67,16 @@
      inkscape:snap-nodes="true"
      inkscape:snap-global="true"
      showguides="true"
-     units="mm">
+     units="mm"
+     inkscape:snap-text-baseline="true">
     <inkscape:grid
        type="xygrid"
        id="grid1201"
        enabled="false"
        originx="20"
-       originy="-489.91585" />
+       originy="-489.91585"
+       spacingx="1"
+       spacingy="1" />
     <inkscape:grid
        type="xygrid"
        id="grid4893"
@@ -99,6 +103,32 @@
   </sodipodi:namedview>
   <defs
      id="defs2987">
+    <marker
+       inkscape:stockid="Arrow1Lstart"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lstart"
+       style="overflow:visible"
+       inkscape:isstock="true">
+      <path
+         id="path5214"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1;fill:#000000;fill-opacity:1"
+         transform="scale(0.8) translate(12.5,0)" />
+    </marker>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4578">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop4580" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop4582" />
+    </linearGradient>
     <marker
        inkscape:stockid="TriangleOutM"
        orient="auto"
@@ -127,22 +157,6 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          d="M 5.77,0 -2.88,5 V -5 Z"
          id="path16028"
-         inkscape:connector-curvature="0" />
-    </marker>
-    <marker
-       inkscape:isstock="true"
-       style="overflow:visible"
-       id="marker9748"
-       refX="0"
-       refY="0"
-       orient="auto"
-       inkscape:stockid="TriangleOutM"
-       inkscape:collect="always">
-      <path
-         transform="scale(0.4)"
-         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
-         d="M 5.77,0 -2.88,5 V -5 Z"
-         id="path9746"
          inkscape:connector-curvature="0" />
     </marker>
     <marker
@@ -370,6 +384,238 @@
          style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
          transform="scale(0.4)" />
     </marker>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="translate(32.46096,0)" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-1"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-4"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-1-0"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-4-0"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-2"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <linearGradient
+       gradientTransform="translate(32.460976,84.417355)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-3"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(32.460966,135.00019)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-3-9"
+       x1="66.764572"
+       y1="-1200.7646"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-3-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-2-4"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-1-0-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-4-0-6"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-1-0-4-4"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-4-0-6-1"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <marker
+       inkscape:isstock="true"
+       style="overflow:visible"
+       id="marker9748-1-3-6-6"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="TriangleOutM"
+       inkscape:collect="always">
+      <path
+         transform="scale(0.4,0.4)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1pt;stroke-opacity:1"
+         d="m 5.77,0 -8.65,5 0,-10 z"
+         id="path9746-6-2-4-6"
+         inkscape:connector-curvature="0" />
+    </marker>
+    <linearGradient
+       gradientTransform="translate(265.76395,136.32787)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-3-9-5"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(265.76393,45.472508)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-1"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(265.76396,211.32761)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-19"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(265.76395,241.32756)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-2"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(265.76395,301.32759)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-7"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(265.76395,331.32757)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-5"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       gradientTransform="translate(265.76396,390.00007)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4578"
+       id="linearGradient4468-14"
+       x1="68.947144"
+       y1="-1209.3483"
+       x2="113.94715"
+       y2="-1192.1608"
+       gradientUnits="userSpaceOnUse" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect1983"
+       is_visible="true" />
   </defs>
   <g
      inkscape:groupmode="layer"
@@ -391,695 +637,1249 @@
      inkscape:label="model"
      style="display:inline"
      transform="translate(131.05285,1233.1113)">
-    <path
-       sodipodi:nodetypes="cc"
-       inkscape:connector-curvature="0"
-       id="path9744"
-       d="m 480.28642,-750.03091 49.32663,-104.99993"
-       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:2.66666675;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748)" />
     <rect
-       y="-1223.0208"
-       x="-124.72536"
+       y="-1225.2032"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4999"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225044"
-       y="-1205.2233"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.7460985"
+       y="-1207.4058"
        id="text17998"><tspan
          id="tspan18074"
          sodipodi:role="line"
-         x="-28.225044"
-         y="-1205.2233"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.7460985"
+         y="-1207.4058"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">I am</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4789"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-1193.8674" />
+       x="-86.894829"
+       y="-1196.0498" />
     <text
+       sodipodi:linespacing="0%"
        id="text4793"
-       y="-1176.0699"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-1178.2526"
+       x="9.5312548"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-1176.0699"
-         x="-28.225039"
+         y="-1178.2526"
+         x="9.5312548"
          sodipodi:role="line"
-         id="tspan4791">Eerste categorie</tspan></text>
+         id="tspan4791">I am a</tspan></text>
     <rect
-       y="-1164.7142"
-       x="-124.72535"
+       y="-1166.8965"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4797"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-1146.9167"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.8750048"
+       y="-1149.0994"
        id="text4801"><tspan
          id="tspan4799"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-1146.9167"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.8750048"
+         y="-1149.0994"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">concerned about</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4805"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-1135.5609" />
+       x="-86.894829"
+       y="-1137.7432" />
     <text
+       sodipodi:linespacing="0%"
        id="text4809"
-       y="-1117.7634"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-1119.946"
+       x="9.878911"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-1117.7634"
-         x="-28.225039"
+         y="-1119.946"
+         x="9.878911"
          sodipodi:role="line"
-         id="tspan4807">Eerste categorie</tspan></text>
+         id="tspan4807">Self as</tspan></text>
     <rect
-       y="-1106.4076"
-       x="-125.19779"
+       y="-1108.59"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4813"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.697479"
-       y="-1088.6101"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.4687548"
+       y="-1090.7927"
        id="text4817"><tspan
          id="tspan4815"
          sodipodi:role="line"
-         x="-28.697479"
-         y="-1088.6101"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.4687548"
+         y="-1090.7927"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Image</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4821"
        width="193.6725"
        height="27.344955"
-       x="-125.19779"
-       y="-1077.2543" />
+       x="-86.894829"
+       y="-1079.4366" />
     <text
        id="text4825"
-       y="-1059.4568"
-       x="-28.697479"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       y="-1061.6394"
+       x="9.644536"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       sodipodi:linespacing="0%"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-1059.4568"
-         x="-28.697479"
+         y="-1061.6394"
+         x="9.644536"
          sodipodi:role="line"
-         id="tspan4823">Eerste categorie</tspan></text>
+         id="tspan4823">consider myself</tspan></text>
     <rect
-       y="-1048.101"
-       x="-124.72535"
+       y="-1050.2833"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4829"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-1030.3035"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.644536"
+       y="-1032.4861"
        id="text4833"><tspan
          id="tspan4831"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-1030.3035"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.644536"
+         y="-1032.4861"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">see myself</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4837"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-1018.9476" />
+       x="-86.894829"
+       y="-1021.13" />
     <text
+       sodipodi:linespacing="0%"
        id="text4841"
-       y="-1001.1501"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-1003.3325"
+       x="9.9453173"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-1001.1501"
-         x="-28.225039"
+         y="-1003.3325"
+         x="9.9453173"
          sodipodi:role="line"
-         id="tspan4839">Eerste categorie</tspan></text>
+         id="tspan4839">someone who</tspan></text>
     <rect
-       y="-989.79431"
-       x="-124.72535"
+       y="-991.97668"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4845"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-971.99683"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.9375048"
+       y="-974.17926"
        id="text4849"><tspan
          id="tspan4847"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-971.99683"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.9375048"
+         y="-974.17926"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">feel at a loss</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4853"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-960.64099" />
+       x="-86.894829"
+       y="-962.82343" />
     <text
+       sodipodi:linespacing="0%"
        id="text4857"
-       y="-942.84351"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-945.02594"
+       x="9.9453173"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-942.84351"
-         x="-28.225039"
+         y="-945.02594"
+         x="9.9453173"
          sodipodi:role="line"
-         id="tspan4855">Eerste categorie</tspan></text>
+         id="tspan4855">means more than</tspan></text>
     <rect
-       y="-931.48773"
-       x="-124.72534"
+       y="-933.6701"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4861"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225031"
-       y="-913.69025"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.5859423"
+       y="-915.87268"
        id="text4865"><tspan
          id="tspan4863"
          sodipodi:role="line"
-         x="-28.225031"
-         y="-913.69025"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.5859423"
+         y="-915.87268"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Self</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4869"
        width="193.6725"
        height="27.344955"
-       x="-124.72534"
-       y="-902.33441" />
+       x="-86.894829"
+       y="-904.51678" />
     <text
+       sodipodi:linespacing="0%"
        id="text4873"
-       y="-884.53693"
-       x="-28.225031"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-886.71936"
+       x="9.503911"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-884.53693"
-         x="-28.225031"
+         y="-886.71936"
+         x="9.503911"
          sodipodi:role="line"
-         id="tspan4871">Eerste categorie</tspan></text>
+         id="tspan4871">Rarely even think about</tspan></text>
     <rect
-       y="-873.18109"
-       x="-124.72534"
+       y="-875.36346"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4877"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225031"
-       y="-855.38361"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.9453173"
+       y="-857.56604"
        id="text4881"><tspan
          id="tspan4879"
          sodipodi:role="line"
-         x="-28.225031"
-         y="-855.38361"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.9453173"
+         y="-857.56604"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">kind of person</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4885"
        width="193.6725"
        height="27.344955"
-       x="-125.19778"
-       y="-844.02777" />
+       x="-86.894829"
+       y="-846.21014" />
     <text
+       sodipodi:linespacing="0%"
        id="text4889"
-       y="-826.23029"
-       x="-28.697472"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-828.41272"
+       x="9.6054735"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-826.23029"
-         x="-28.697472"
+         y="-828.41272"
+         x="9.6054735"
          sodipodi:role="line"
-         id="tspan4887">Eerste categorie</tspan></text>
+         id="tspan4887">Express</tspan></text>
     <rect
-       y="-814.87445"
-       x="-125.19778"
+       y="-817.05682"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4893"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.697472"
-       y="-797.07697"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.2187548"
+       y="-799.2594"
        id="text4897"><tspan
          id="tspan4895"
          sodipodi:role="line"
-         x="-28.697472"
-         y="-797.07697"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="11.625005"
+         y="-799.2594"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Important part </tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4901"
        width="193.6725"
        height="27.344955"
-       x="-124.72534"
-       y="-785.72113" />
+       x="-86.894829"
+       y="-787.90356" />
     <text
+       sodipodi:linespacing="0%"
        id="text4905"
-       y="-767.92365"
-       x="-28.225031"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-770.10608"
+       x="9.4687548"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-767.92365"
-         x="-28.225031"
+         y="-770.10608"
+         x="9.4687548"
          sodipodi:role="line"
-         id="tspan4903">Eerste categorie</tspan></text>
+         id="tspan4903">Important part to me</tspan></text>
     <rect
-       y="-756.56781"
-       x="-124.72534"
+       y="-758.75024"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4909"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225031"
-       y="-738.77032"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.4062548"
+       y="-740.95276"
        id="text4913"><tspan
          id="tspan4911"
          sodipodi:role="line"
-         x="-28.225031"
-         y="-738.77032"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.4062548"
+         y="-740.95276"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Important</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4917"
        width="193.6725"
        height="27.344955"
-       x="-124.72534"
-       y="-727.41449" />
+       x="-86.894829"
+       y="-729.59692" />
     <text
+       sodipodi:linespacing="0%"
        id="text4921"
-       y="-709.617"
-       x="-28.225031"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-711.79944"
+       x="9.878911"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-709.617"
-         x="-28.225031"
+         y="-711.79944"
+         x="9.878911"
          sodipodi:role="line"
-         id="tspan4919">Eerste categorie</tspan></text>
+         id="tspan4919">Characteristics</tspan></text>
     <rect
-       y="-639.95459"
-       x="-124.72536"
+       y="-642.13702"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4925"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225044"
-       y="-622.1571"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="10.175786"
+       y="-624.33954"
        id="text4929"><tspan
          id="tspan4927"
          sodipodi:role="line"
-         x="-28.225044"
-         y="-622.1571"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="10.175786"
+         y="-624.33954"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Appropriate for me</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4933"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-581.64795" />
+       x="-86.894829"
+       y="-583.83044" />
     <text
+       sodipodi:linespacing="0%"
        id="text4937"
-       y="-563.85046"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-566.0329"
+       x="10.160161"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-563.85046"
-         x="-28.225039"
+         y="-566.0329"
+         x="10.160161"
          sodipodi:role="line"
-         id="tspan4935">Eerste categorie</tspan></text>
+         id="tspan4935">Should</tspan></text>
     <rect
-       y="-523.34131"
-       x="-124.72535"
+       y="-525.5238"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4941"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-505.54382"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.566411"
+       y="-507.72635"
        id="text4945"><tspan
          id="tspan4943"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-505.54382"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.566411"
+         y="-507.72635"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Role</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4949"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-465.0347" />
+       x="-86.894829"
+       y="-467.21719" />
     <text
+       sodipodi:linespacing="0%"
        id="text4953"
-       y="-447.23721"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-449.41974"
+       x="9.6875048"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-447.23721"
-         x="-28.225039"
+         y="-449.41974"
+         x="9.6875048"
          sodipodi:role="line"
-         id="tspan4951">Eerste categorie</tspan></text>
+         id="tspan4951">Personal</tspan></text>
     <rect
-       y="-406.72806"
-       x="-125.19779"
+       y="-408.91055"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4957"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.697479"
-       y="-388.93057"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.9804735"
+       y="-391.1131"
        id="text4961"><tspan
          id="tspan4959"
          sodipodi:role="line"
-         x="-28.697479"
-         y="-388.93057"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.9804735"
+         y="-391.1131"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Acceptibility</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4965"
        width="193.6725"
        height="27.344955"
-       x="-125.19779"
-       y="-348.42145" />
+       x="-86.894829"
+       y="-350.60394" />
     <text
+       sodipodi:linespacing="0%"
        id="text4969"
-       y="-330.62396"
-       x="-28.697479"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       y="-332.80649"
+       x="9.6054735"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        xml:space="preserve"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-330.62396"
-         x="-28.697479"
+         y="-332.80649"
+         x="9.6054735"
          sodipodi:role="line"
-         id="tspan4967">Eerste categorie</tspan></text>
+         id="tspan4967">How I want to live</tspan></text>
     <rect
-       y="-290.11481"
-       x="-124.72535"
+       y="-292.29733"
+       x="-86.894829"
        height="27.344955"
        width="193.6725"
        id="rect4973"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
+       sodipodi:linespacing="0%"
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-272.31732"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.6171923"
+       y="-274.49985"
        id="text4977"><tspan
          id="tspan4975"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-272.31732"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="9.6171923"
+         y="-274.49985"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Domain specific</tspan></text>
     <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect4997"
+       width="193.6725"
+       height="27.344955"
+       x="-86.894829"
+       y="-700.4436" />
+    <text
+       sodipodi:linespacing="0%"
+       id="text5001"
+       y="-682.64618"
+       x="9.8867235"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
+         y="-682.64618"
+         x="9.8867235"
+         sodipodi:role="line"
+         id="tspan4999">Believe in</tspan></text>
+    <rect
+       y="-671.29034"
+       x="-86.894829"
+       height="27.344955"
+       width="193.6725"
+       id="rect5005"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="0%"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.6054735"
+       y="-653.49286"
+       id="text5009"><tspan
+         id="tspan5007"
+         sodipodi:role="line"
+         x="9.6054735"
+         y="-653.49286"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Being unique</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect5013"
+       width="193.6725"
+       height="27.344955"
+       x="-86.894829"
+       y="-612.98376" />
+    <text
+       sodipodi:linespacing="0%"
+       id="text5017"
+       y="-595.18622"
+       x="10.14063"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
+         y="-595.18622"
+         x="10.14063"
+         sodipodi:role="line"
+         id="tspan5015">Values</tspan></text>
+    <rect
+       y="-554.67712"
+       x="-86.894829"
+       height="27.344955"
+       width="193.6725"
+       id="rect5021"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="0%"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.3710985"
+       y="-536.87958"
+       id="text5025"><tspan
+         id="tspan5023"
+         sodipodi:role="line"
+         x="9.3710985"
+         y="-536.87958"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Role identity</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect5029"
+       width="193.6725"
+       height="27.344955"
+       x="-86.894829"
+       y="-496.37048" />
+    <text
+       sodipodi:linespacing="0%"
+       id="text5033"
+       y="-478.57303"
+       x="9.3710985"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
+         y="-478.57303"
+         x="9.3710985"
+         sodipodi:role="line"
+         id="tspan5031">Responsibility</tspan></text>
+    <rect
+       y="-438.06387"
+       x="-86.894829"
+       height="27.344955"
+       width="193.6725"
+       id="rect5037"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="0%"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.6054735"
+       y="-420.26642"
+       id="text5041"><tspan
+         id="tspan5039"
+         sodipodi:role="line"
+         x="9.6054735"
+         y="-420.26642"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Perceived projected image</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect5045"
+       width="193.6725"
+       height="27.344955"
+       x="-86.894829"
+       y="-379.75726" />
+    <text
+       sodipodi:linespacing="0%"
+       id="text5049"
+       y="-361.95978"
+       x="9.6054735"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
+         y="-361.95978"
+         x="9.6054735"
+         sodipodi:role="line"
+         id="tspan5047">Lifestyle</tspan></text>
+    <rect
+       y="-321.45062"
+       x="-86.894829"
+       height="27.344955"
+       width="193.6725"
+       id="rect5053"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       sodipodi:linespacing="0%"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="9.8867235"
+       y="-303.65317"
+       id="text5057"><tspan
+         id="tspan5055"
+         sodipodi:role="line"
+         x="9.8867235"
+         y="-303.65317"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Embarrassed</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect5061"
+       width="193.6725"
+       height="27.344955"
+       x="-86.894829"
+       y="-263.14401" />
+    <text
+       sodipodi:linespacing="0%"
+       id="text5065"
+       y="-245.3465"
+       x="10.113286"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
+         y="-245.3465"
+         x="10.113286"
+         sodipodi:role="line"
+         id="tspan5063">Miscellaneous</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3"
+       d="m 174.15811,-1414.3086 53.82749,-9.7832"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.70713574;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-8"
+       d="m 175.01316,-1441.2793 52.97244,17.1875"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.64477915;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-1)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot6138"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion6140"><rect
+           id="rect6142"
+           width="135"
+           height="45"
+           x="215"
+           y="27.278055" /></flowRegion><flowPara
+         id="flowPara6144"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-8-6"
+       d="m 174.15811,-1356.002 53.82749,16.3275"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.64477915;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-1-0)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-3"
+       d="m 174.15811,-1326.8487 53.82749,-12.8258"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.70713574;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-3)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-3-1"
+       d="m 174.15811,-1268.5421 53.82749,-20.5497"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.70713574;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-3-6)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-8-6-4"
+       d="m 174.15811,-1297.6954 53.82749,8.6036"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:0.64477915;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-1-0-4)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot8276"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion8278"><rect
+           id="rect8280"
+           width="210"
+           height="45"
+           x="20"
+           y="1032.2781" /></flowRegion><flowPara
+         id="flowPara8282"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot8296"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion8298"><rect
+           id="rect8300"
+           width="0"
+           height="105"
+           x="335"
+           y="732.27808" /></flowRegion><flowPara
+         id="flowPara8302"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot8304"
+       style="font-style:normal;font-weight:normal;line-height:0.01%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"><flowRegion
+         id="flowRegion8306"><rect
+           id="rect8308"
+           width="15"
+           height="135"
+           x="335"
+           y="702.27808" /></flowRegion><flowPara
+         id="flowPara8310"
+         style="font-size:40px;line-height:1.25"> </flowPara></flowRoot>    <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect4981"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-231.8082" />
+       x="146.40811"
+       y="-845.83325" />
     <text
        id="text4985"
-       y="-214.01071"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       y="-828.07874"
+       x="242.90843"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       sodipodi:linespacing="0%"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-214.01071"
-         x="-28.225039"
+         y="-828.07874"
+         x="242.90843"
          sodipodi:role="line"
-         id="tspan4983">Eerste categorie</tspan></text>
+         id="tspan4983">Express</tspan></text>
     <rect
-       y="-202.65485"
-       x="-124.72535"
+       y="-815.36078"
+       x="146.40811"
        height="27.344955"
        width="193.6725"
        id="rect4989"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-184.85736"
-       id="text4993"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="242.52171"
+       y="-797.60626"
+       id="text4993"
+       sodipodi:linespacing="0%"><tspan
          id="tspan4991"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-184.85736"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="244.92796"
+         y="-797.60626"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Important part </tspan></text>
     <rect
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect4997"
-       width="193.6725"
-       height="27.344955"
-       x="-124.72534"
-       y="-698.26123" />
-    <text
-       id="text5001"
-       y="-680.46375"
-       x="-28.225031"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-680.46375"
-         x="-28.225031"
-         sodipodi:role="line"
-         id="tspan4999">Eerste categorie</tspan></text>
-    <rect
-       y="-669.10791"
-       x="-124.72534"
-       height="27.344955"
-       width="193.6725"
-       id="rect5005"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225031"
-       y="-651.31042"
-       id="text5009"><tspan
-         id="tspan5007"
-         sodipodi:role="line"
-         x="-28.225031"
-         y="-651.31042"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
-    <rect
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect5013"
-       width="193.6725"
-       height="27.344955"
-       x="-124.72536"
-       y="-610.80127" />
-    <text
-       id="text5017"
-       y="-593.00378"
-       x="-28.225044"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-593.00378"
-         x="-28.225044"
-         sodipodi:role="line"
-         id="tspan5015">Eerste categorie</tspan></text>
-    <rect
-       y="-552.49463"
-       x="-124.72535"
-       height="27.344955"
-       width="193.6725"
-       id="rect5021"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-534.69714"
-       id="text5025"><tspan
-         id="tspan5023"
-         sodipodi:role="line"
-         x="-28.225039"
-         y="-534.69714"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
-    <rect
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect5029"
-       width="193.6725"
-       height="27.344955"
-       x="-124.72535"
-       y="-494.18799" />
-    <text
-       id="text5033"
-       y="-476.3905"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-476.3905"
-         x="-28.225039"
-         sodipodi:role="line"
-         id="tspan5031">Eerste categorie</tspan></text>
-    <rect
-       y="-435.88138"
-       x="-124.72535"
-       height="27.344955"
-       width="193.6725"
-       id="rect5037"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-418.08389"
-       id="text5041"><tspan
-         id="tspan5039"
-         sodipodi:role="line"
-         x="-28.225039"
-         y="-418.08389"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
-    <rect
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect5045"
-       width="193.6725"
-       height="27.344955"
-       x="-125.19779"
-       y="-377.57474" />
-    <text
-       id="text5049"
-       y="-359.77725"
-       x="-28.697479"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-359.77725"
-         x="-28.697479"
-         sodipodi:role="line"
-         id="tspan5047">Eerste categorie</tspan></text>
-    <rect
-       y="-319.26813"
-       x="-125.19779"
-       height="27.344955"
-       width="193.6725"
-       id="rect5053"
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.697479"
-       y="-301.47064"
-       id="text5057"><tspan
-         id="tspan5055"
-         sodipodi:role="line"
-         x="-28.697479"
-         y="-301.47064"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
-    <rect
-       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
-       id="rect5061"
-       width="193.6725"
-       height="27.344955"
-       x="-124.72535"
-       y="-260.96149" />
-    <text
-       id="text5065"
-       y="-243.16402"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-243.16402"
-         x="-28.225039"
-         sodipodi:role="line"
-         id="tspan5063">Eerste categorie</tspan></text>
-    <rect
-       y="-144.34825"
-       x="-124.72535"
+       y="-875.83325"
+       x="146.40811"
        height="27.344955"
        width="193.6725"
        id="rect5069"
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
     <text
        xml:space="preserve"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="-28.225039"
-       y="-126.55077"
-       id="text5073"><tspan
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="243.24828"
+       y="-857.90295"
+       id="text5073"
+       sodipodi:linespacing="0%"><tspan
          id="tspan5071"
          sodipodi:role="line"
-         x="-28.225039"
-         y="-126.55077"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Eerste categorie</tspan></text>
+         x="243.24828"
+         y="-857.90295"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">kind of person</tspan></text>
     <rect
        style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
        id="rect5077"
        width="193.6725"
        height="27.344955"
-       x="-124.72535"
-       y="-173.50156" />
+       x="146.40811"
+       y="-1159.5057" />
     <text
        id="text5081"
-       y="-155.70407"
-       x="-28.225039"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;line-height:1;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       xml:space="preserve"><tspan
+       y="-1140.0129"
+       x="243.17796"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       sodipodi:linespacing="0%"><tspan
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
-         y="-155.70407"
-         x="-28.225039"
+         y="-1140.0129"
+         x="243.17796"
          sodipodi:role="line"
-         id="tspan5079">Eerste categorie</tspan></text>
+         id="tspan5079">concerned about</tspan></text>
+    <text
+       sodipodi:linespacing="0%"
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;line-height:0%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="274.50171"
+       y="-1422.7643"
+       id="text4422"><tspan
+         sodipodi:role="line"
+         id="tspan4424"
+         x="274.50171"
+         y="-1422.7643"
+         style="font-size:40px;line-height:1.25"> </tspan></text>
+    <rect
+       y="-1205.8333"
+       x="146.40811"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="243.04906"
+       y="-1186.5162"
+       id="text17998-6"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6"
+         sodipodi:role="line"
+         x="243.04906"
+         y="-1186.5162"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">I am</tspan></text>
+    <rect
+       y="-1121.416"
+       x="146.40811"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-7"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-3);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="243.18187"
+       y="-1101.9427"
+       id="text17998-6-4"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2"
+         sodipodi:role="line"
+         x="243.18187"
+         y="-1101.9427"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Self as</tspan></text>
+    <rect
+       y="-1070.8333"
+       x="146.40811"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-7-4"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-3-9);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="242.94749"
+       y="-1052.903"
+       id="text17998-6-4-1"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9"
+         sodipodi:role="line"
+         x="242.94749"
+         y="-1052.903"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">consider myself</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect8312-5"
+       width="193.6725"
+       height="27.344955"
+       x="146.40811"
+       y="-964.50574" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect8312-9"
+       width="193.6725"
+       height="27.344955"
+       x="146.40811"
+       y="-993.65063" />
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect8312-99"
+       width="193.6725"
+       height="27.344955"
+       x="146.40811"
+       y="-1023.1782" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="243.24828"
+       y="-1003.6854"
+       id="text17998-6-4-1-8"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9"
+         sodipodi:role="line"
+         x="243.24828"
+         y="-1003.6854"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">someone who</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="243.24046"
+       y="-974.15784"
+       id="text17998-6-4-1-8-8"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-0"
+         sodipodi:role="line"
+         x="243.24046"
+         y="-974.15784"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">feel at a loss</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="243.24828"
+       y="-945.01294"
+       id="text17998-6-4-1-8-2"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-4"
+         sodipodi:role="line"
+         x="243.24828"
+         y="-945.01294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">means more than</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect8312-1"
+       width="193.6725"
+       height="27.344955"
+       x="146.40811"
+       y="-931.46808" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="242.8889"
+       y="-911.99481"
+       id="text17998-6-4-1-8-9"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-2"
+         sodipodi:role="line"
+         x="242.8889"
+         y="-911.99481"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Self</tspan></text>
+    <rect
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       id="rect8312"
+       width="193.6725"
+       height="27.344955"
+       x="146.40811"
+       y="-904.12311" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="242.84593"
+       y="-886.19281"
+       id="text17998-6-4-1-8-4"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-1"
+         sodipodi:role="line"
+         x="242.84593"
+         y="-886.19281"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">rarely even think about</tspan></text>
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-8-6-4-5"
+       d="m 315.59207,-1107.7435 53.35508,51.9103"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.18000698;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-1-0-4-4)" />
+    <path
+       sodipodi:nodetypes="cc"
+       inkscape:connector-curvature="0"
+       id="path9744-3-3-1-7"
+       d="m 315.59207,-1009.5057 53.35508,-46.3275"
+       style="display:inline;fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1.1881671;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;marker-end:url(#marker9748-1-3-6-6)" />
+    <rect
+       y="-1160.3608"
+       x="379.71106"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-3"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-1);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       id="text5081-4"
+       y="-1140.868"
+       x="476.48093"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"
+       sodipodi:linespacing="0%"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle"
+         y="-1140.868"
+         x="476.48093"
+         sodipodi:role="line"
+         id="tspan5079-4">concerned about</tspan></text>
+    <rect
+       y="-1069.5057"
+       x="379.71109"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-7-4-4"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-3-9-5);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="476.25046"
+       y="-1051.5754"
+       id="text17998-6-4-1-4"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-2"
+         sodipodi:role="line"
+         x="476.25046"
+         y="-1051.5754"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">consider myself</tspan></text>
+    <rect
+       y="-815.83325"
+       x="379.71109"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-5"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-14);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <rect
+       y="-994.50574"
+       x="379.71109"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-32"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-19);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="476.54343"
+       y="-975.01294"
+       id="text17998-6-4-1-8-8-5"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-0-6"
+         sodipodi:role="line"
+         x="476.54343"
+         y="-975.01294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">feel at a loss</tspan></text>
+    <rect
+       y="-964.50574"
+       x="379.71109"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-0"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-2);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="476.55124"
+       y="-945.01294"
+       id="text17998-6-4-1-8-2-5"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-4-8"
+         sodipodi:role="line"
+         x="476.55124"
+         y="-945.01294"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">means more than</tspan></text>
+    <rect
+       y="-904.50574"
+       x="379.71109"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-4"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-7);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="476.1489"
+       y="-886.57544"
+       id="text17998-6-4-1-8-4-6"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan18074-6-2-9-9-1-3"
+         sodipodi:role="line"
+         x="476.1489"
+         y="-886.57544"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">rarely even think about</tspan></text>
+    <rect
+       y="-874.50574"
+       x="379.71109"
+       height="27.344955"
+       width="193.6725"
+       id="rect4999-7-9"
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:url(#linearGradient4468-5);fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:0.94488192;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="476.55124"
+       y="-856.57544"
+       id="text5073-1"
+       sodipodi:linespacing="0%"><tspan
+         id="tspan5071-2"
+         sodipodi:role="line"
+         x="476.55124"
+         y="-856.57544"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">kind of person</tspan></text>
+    <text
+       sodipodi:linespacing="0%"
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Shanti (Greater Good Version)';-inkscape-font-specification:'Shanti (Greater Good Version)';letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="475.82468"
+       y="-796.75122"
+       id="text4993-6"><tspan
+         id="tspan4991-6"
+         sodipodi:role="line"
+         x="478.23093"
+         y="-796.75122"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1;font-family:'Trebuchet MS';-inkscape-font-specification:'Trebuchet MS';text-align:center;text-anchor:middle">Important part </tspan></text>
+    <path
+       style="fill:none;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#marker8923)"
+       d="m 315.59207,-1057.1608 53.35508,1.3276"
+       id="path536"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       sodipodi:nodetypes="zsszczsszcsszzczzszcz"
+       inkscape:connector-curvature="0"
+       inkscape:original-d="m 649.40013,-441.5249 c -2.16683,-2.93102 3.62342,19.5742 -0.67715,17.90777 -2.15056,-0.83715 7.32803,156.7356 -0.0333,156.27827 -7.35788,-0.45828 -1.81832,56.18375 -2.87656,54.03085 -1.05803,-2.15551 -8.95093,19.76463 -8.95093,19.76463 0,0 2.34846,-17.21782 3.36461,-16.02107 1.01569,1.1958 -4.90183,-41.98163 1.96245,-41.61504 6.86429,0.3701 -2.02403,-147.21729 -0.10018,-146.85244 3.85061,0.73144 1.29948,-48.05691 3.43967,-44.92676 2.14019,3.13019 4.74814,-13.0847 4.74814,-13.0847 0,0 -2.46884,-10.06207 -5.07413,-15.28168 -1.44681,-2.89756 -16.69725,-54.15691 -3.22327,-57.14963 13.47398,-2.99445 -1.51485,-144.78414 0.0669,-145.27498 1.58312,-0.49351 -3.38987,-24.41845 -1.08252,-28.98331 2.3078,-4.56572 -4.10488,-15.81039 -4.10488,-15.81039 0,0 5.59077,2.8614 7.86483,15.73199 2.27409,12.86972 4.55861,51.65153 3.98159,56.80061 -0.5769,5.15002 12.56543,151.07891 -0.11816,152.97269 -12.68415,1.89469 1.98749,27.60414 0.99341,22.46028 -0.99453,-5.14292 8.67106,11.68801 4.0491,14.53442 -4.41894,-2.95392 -2.06859,17.44863 -4.23542,14.51849 z"
+       inkscape:path-effect="#path-effect1983"
+       id="path1981"
+       d="m 649.40013,-441.5249 c -0.23955,5.96872 -0.46527,11.938 -0.67715,17.90777 -1.84829,52.07616 -2.64266,104.23469 -0.0333,156.27827 0.90769,18.10381 2.18244,36.62457 -2.87656,54.03085 -2.02533,6.96847 -5.04936,13.64586 -8.95093,19.76463 1.4391,-5.26704 2.5633,-10.62009 3.36461,-16.02107 2.04004,-13.75028 1.97852,-27.71426 1.96245,-41.61504 -0.0566,-48.95123 0.50414,-97.90491 -0.10018,-146.85244 -0.18604,-15.06875 -0.45548,-30.36895 3.43967,-44.92676 1.20078,-4.4878 2.79142,-8.87122 4.74814,-13.0847 -2.09853,-4.94644 -3.79724,-10.06243 -5.07413,-15.28168 -4.54858,-18.59221 -3.67063,-38.01433 -3.22327,-57.14963 1.13185,-48.41363 -0.67434,-96.8538 0.0669,-145.27498 0.14817,-9.67911 0.39444,-19.4164 -1.08252,-28.98331 -0.83216,-5.39024 -2.20973,-10.69613 -4.10488,-15.81039 3.2784,4.87983 5.92866,10.18115 7.86483,15.73199 6.29239,18.03978 4.83719,37.71408 3.98159,56.80061 -2.28378,50.94599 0.26444,101.97697 -0.11816,152.97269 -0.0563,7.50291 -0.17312,15.04839 0.99341,22.46028 0.78366,4.97922 2.1454,9.86722 4.0491,14.53442 l -4.23542,14.51849 0.006,0 z"
+       style="display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:3.1277082" />
+    <rect
+       style="fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect4383"
+       width="82.731491"
+       height="68.402054"
+       x="-35.593433"
+       y="-1302.0133" />
+    <rect
+       style="display:inline;fill:#0000ff;fill-rule:evenodd;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       id="rect4383-3"
+       width="82.731491"
+       height="68.402054"
+       x="-49.382015"
+       y="-180.2491" />
+    <path
+       id="path3602"
+       d="m 766.34715,-949.6491 -8.5,-8.5 -26.9,26.9 -26.9,-26.9 -8.5,8.5 26.9,26.9 -26.9,26.9 8.5,8.5 26.9,-26.9 26.9,26.9 8.5,-8.5 -26.9,-26.9 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3612"
+       d="m 731.94715,-870.7491 c -21,0 -38,17 -38,38 0,21 17,38 38,38 21,0 38,-17 38,-38 0,-21 -17,-38 -38,-38 z m 0,66 c -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 0,2.8 -2.2,5 -5,5 z m 3,-23.2 c 0,2.6 0,9.2 0,9.2 l -6,0 0,-15 3,0 c 6.7,0 11,-3.9 11,-10 0,-6.3 -4.7,-11 -11,-11 -6.9,0 -11,4.1 -11,11 l -6,0 c 0,-10.2 6.8,-17 17,-17 9.5,0 17,7.5 17,17 0,8.5 -5.6,14.6 -14,15.8 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3622"
+       d="m 701.94715,-726.7491 0,-8 56,0 0,8 -56,0 z m 28,-42 c -21,0 -38,17 -38,38 0,21 17,38 38,38 21,0 38,-17 38,-38 0,-21 -17,-38 -38,-38 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3632"
+       d="m 779.54715,-605.7366 -39.1,-68 c -1.5,-2.7 -5.4,-2.7 -6.9,0 l -39.2,68 c -1.5,2.7 0.4,6 3.5,6 l 39.1,0 39.1,0 c 3.1,0 5,-3.3 3.5,-6 z m -49.2,-2.9 5.7,-23.1 -8.2,0 4,-25 12,0 -5.3,19 8.4,0 -16.6,29.1 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3642"
+       d="m 731.94715,-495.7491 c -21,0 -38,17 -38,38 0,21 17,38 38,38 21,0 38,-17 38,-38 0,-21 -17,-38 -38,-38 z m -26,38 c 0,-5 1.4,-9.7 3.9,-13.6 l 35.8,35.8 c -4,2.4 -8.7,3.8 -13.7,3.8 -14.3,0 -26,-11.7 -26,-26 z m 48.1,13.6 -35.7,-35.7 c 3.9,-2.5 8.6,-3.9 13.6,-3.9 14.3,0 26,11.7 26,26 0,5 -1.4,9.7 -3.9,13.6 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3652"
+       d="m 777.54715,-516.7366 -39.1,-68 c -1.5,-2.7 -5.4,-2.7 -6.9,0 l -39.2,68 c -1.5,2.7 0.4,6 3.5,6 l 39.1,0 39.1,0 c 3.1,0 5,-3.3 3.5,-6 z m -45.6,-52 6,0 0,35 -6,0 0,-35 z m 3,49 c -2.8,0 -5,-2.2 -5,-5 0,-2.8 2.2,-5 5,-5 2.8,0 5,2.2 5,5 0,2.8 -2.2,5 -5,5 z"
+       inkscape:connector-curvature="0" />
+    <path
+       id="path3662"
+       d="m 1029.9472,-986.7491 -74.80005,0 8.9,-8.9 c 1.2,-1.2 1.2,-3.1 0,-4.2 -1.2,-1.2 -3.1,-1.2 -4.2,0 l -14,14 c -1.2,1.2 -1.2,3.1 0,4.2 l 14,14 c 0.6,0.6 1.4,0.9 2.1,0.9 0.7,0 1.5,-0.3 2.1,-0.9 1.2,-1.2 1.2,-3.1 0,-4.2 l -8.9,-8.9 74.80005,0 c 1.7,0 3,-1.3 3,-3 0,-1.7 -1.3,-3 -3,-3 z"
+       inkscape:connector-curvature="0" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="806.94714"
+       y="-926.74908"
+       id="text3671"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3673"
+         x="806.94714"
+         y="-926.74908" /></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="812.94714"
+       y="-709.74915"
+       id="text3675"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3677"
+         x="812.94714"
+         y="-709.74915">Different construct then self-identity</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="822.94714"
+       y="-450.74911"
+       id="text3679"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3681"
+         x="822.94714"
+         y="-450.74911">does not include the target behavior</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="819.94714"
+       y="-824.74908"
+       id="text3683"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3685"
+         x="819.94714"
+         y="-824.74908">ambiguous </tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="816.94714"
+       y="-921.74908"
+       id="text3687"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3689"
+         x="816.94714"
+         y="-921.74908">do not measure how people want to be</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="820.94714"
+       y="-637.74915"
+       id="text3691"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3693"
+         x="820.94714"
+         y="-637.74915">Direct measurement</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       x="825.94714"
+       y="-535.74915"
+       id="text3695"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan3697"
+         x="825.94714"
+         y="-535.74915">Cannot be used in all kind of behaviors</tspan></text>
   </g>
 </svg>
