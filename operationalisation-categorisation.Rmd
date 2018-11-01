@@ -48,31 +48,37 @@ names(queryHits) <- queryHitsFiles;
 
 ```
 
-Hits from each source:
+# Queries and screening
+
+## Hits from each source
 
 ```{r}
 knitr::kable(userfriendlyscience::freq(queryHits[[1]]$records$source)$dat);
 ```
 
-Types of entries:
+## Types of entries
 
 ```{r}
 knitr::kable(userfriendlyscience::freq(tolower(queryHits[[1]]$records$recordtype))$dat);
 ```
 
-Screening results - exclusions based on abstract:
+## Screening results
+
+### Exclusions based on abstract
 
 ```{r}
 knitr::kable(userfriendlyscience::freq(tolower(queryHits[[1]]$records$review_abstract))$dat);
 ```
 
-Screening results - exclusions based on full text:
+### Exclusions based on full text
 
 ```{r}
 knitr::kable(userfriendlyscience::freq(tolower(queryHits[[1]]$records$review_items))$dat);
 ```
 
+(Note that the entries marked as `NA (missing)` here were already excluded based on their abstracts.
 
+# Extraction
 
 ```{r}
 
@@ -87,7 +93,7 @@ resultsTable <- ldply(queryHits,
                           sapply(strsplit(queryHitsObject$records$operationalisations, "\\|\\|"),
                                  paste,
                                  collapse="\n");
-                        return(res[res$review_items=='incl', ]);
+                        return(res[!is.na(res$review_items) & res$review_items=='incl', ]);
                       });
 
 write.csv(resultsTable,
@@ -405,7 +411,7 @@ In conclusion, it seems that based on the self-identity literature, the followin
 
 ## Number of operationalisations in each category in each phase
 
-```{r operationalisations-per-category, results='asis'}
+```{r operationalisations-per-category, results='as-is'}
 
 cat0("\n\n### Round 1\n\n");
 
