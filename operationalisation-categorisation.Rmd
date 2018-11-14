@@ -1,12 +1,21 @@
 ---
-title: "Operationalisation categorization"
-author: "Gjalt-Jorn Peters, Marwin Snippe & Gerjo Kok"
+title: "The Operationalisation of Self-Identity in Reasoned Action Models: A systematic review of self-identity operationalisations in 30 years of research"
+author: "Marwin Snippe, Gjalt-Jorn Ygram Peters & Gerjo Kok"
 date: "`r format(Sys.time(), '%H:%M:%S on %Y-%m-%d %Z (GMT%z)')`"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_float:
+      collapsed: false
+      smooth_scroll: true
+      toc_depth: 4
+    code_folding: hide
+    df_print: paged
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE);
+knitr::opts_chunk$set(rows.print = 30);
 require(here);
 ```
 
@@ -31,24 +40,29 @@ queryHitsFiles <- c("master-screening-edited finished backup.bib");
 ### Load packages
 ################################################################################
 
-require('userfriendlyscience');
-require('metabefor');
+require('userfriendlyscience', quietly = TRUE);
+require('metabefor', quietly = TRUE);
 safeRequire('plyr');
 safeRequire('dplyr');
 
+```
+
+# Queries and screening
+
+## Importing references
+
+```{r}
 ################################################################################
 ### Import references
 ################################################################################
 
 queryHits <- lapply(queryHitsFiles,
                     function(filename) {
-                      return(importBibtex(file.path(queryHitsPath, filename)));
+                      return(importBibtex(file.path(queryHitsPath,
+                                                    filename)));
                     });
 names(queryHits) <- queryHitsFiles;
-
 ```
-
-# Queries and screening
 
 ## Hits from each source
 
@@ -114,7 +128,7 @@ longResults <- ldply(queryHits,
                                          year = queryHitsObject$records$year,
                                          operationalisations = queryHitsObject$records$operationalisations,
                                          review_items = queryHitsObject$records$review_items)
-                       return(res[res$review_items=='incl', ]);
+                        return(res[!is.na(res$review_items) & res$review_items=='incl', ]);
                      });
 
 longResults <- do.call(rbind,
@@ -147,7 +161,6 @@ aspectStimulusFragments <- list(importantPart = "important part",
                                 importantToMe = "important to me",
                                 believeIn = "believe in",
                                 meansMoreThan = "means more than",
-                                responsibility = "I have a responsibility",
                                 howIWantToLive = "want(ed)* to live",
                                 rarelyEvenThinkAbout = "rarely (even )*think about",
                                 kindOfPerson = c("kind of person", "type of (a )*person",
@@ -158,8 +171,6 @@ aspectStimulusFragments <- list(importantPart = "important part",
                                 concernedAbout = "concerned (are you )*(about|with)",
                                 feelAtALoss = c("feel (that I missed out|lost|upset|a loss|at a loss)",
                                                 "los(t|e) something"),
-                                amSomeoneWho = c("I am someone who", "I am somebody who"),
-                                acceptibility = "accept",
                                 perceivedProjectedImage = c("might see me as", "people to see me as"),
                                 iAmA = c("I am a", "I am meat eater", "thinker", "person who teaches"),
                                 iAm = "I am",
@@ -181,8 +192,7 @@ aspectStimulusFragments <- list(importantPart = "important part",
                                 express = "express",
                                 lifestyle = "lifestyle",
                                 image = "image",
-                                values = "values",
-                                beingUnique = "being unique",
+                                values = "values",                                beingUnique = "being unique",
                                 important = "important",
                                 personal = "personal",
                                 characteristics = "characteristics",
@@ -207,8 +217,21 @@ for (i in seq_along(aspectStimulusFragments)) {
   longResults$anyMatch <- longResults$anyMatch | longResults[, names(aspectStimulusFragments)[[i]]];
 }
 
+```
+
+### Results of first operationalisation categorization {.tabset}
+
+#### Overview
+
+Check the second tab in this section to see more detailed logging.
+
+#### Logs
+
+```{r}
+
 multiVarFreq(longResults, names(aspectStimulusFragments));
 sum(longResults$anyMatch);
+
 nrow(longResults) - sum(longResults$anyMatch);
 
 ### Verify that all operationalisations were only categorised once
@@ -237,10 +260,7 @@ write.csv(longResults[longResults$anyMatch|1, c('category',
 
 ## Discussion of operationalisation categories
 
-- **acceptibility**: On reflection, we conclude that these items are more lilely operationalisation of attitude than self-identity, because none of the three included items contains a reference to the self. *Exclude*
-- **amSomeoneWho**: Retained as self-identity operationalisation. *Retain*
 - **appropriateForMe**: This operationalisation conflates perceived normative aspects with self-identity. Therefore, although it likely partly measures self-identity, because it also measures perceived approval of others, it is not a suitable item in a self-identity operationaliation. *Exclude*
-- **beingUnique**: This does not satisfy our criterion that the item must include the target behavior. *Exclude*
 - **believeIn**: This does not satisfy our criteria that 1) the item must contain a reference to the self, and 2) the item must include the target behavior. *Exclude*
 - **characteristics**: This item is likely lost in translation: 'Identical to my characteristics' is ambiguous at best. It is possible that this item measures roughly the same as category 'selfAs'. Given that even if it does fall into that category, it is not a very good example, and given that we do have example items in that category, for now, we exclude this item. *Exclude*
 - **concernedAbout**: This is often used; whether people see themselves as concerned about a behavior is indicative of whether affect is used in self-regulation of this behavior, and indicative of self-identity. *Retain*
@@ -263,7 +283,6 @@ write.csv(longResults[longResults$anyMatch|1, c('category',
 - **perceivedProjectedImage**: This item measures social identity, not self-identity. *Exclude*
 - **personal**: These items are a mix of items in categories we already discussed. We can therefore safely exclude this entire category without omitting any potential aspects of self-identity. *Exclude*
 - **rarelyEvenThinkAbout**: This is a negative formulation: for people for whom a behavior is important to their self-identity, the behavior will be more salient. This item should be retained. *Retain*
-- **responsibility**: Having a responsibility is not the same as self-identity. *Exclude*
 - **role**: These items can easily be interpreted as referring to a formal role: all students at a university have that role of student, but they don't always identify as a student. *Exclude*
 - **roleIdentity**: This does not seem to be an operationalisation of self-identity. *Exclude*
 - **seeMyself**: This is the same category as I 'consider myself'. *Merge*
